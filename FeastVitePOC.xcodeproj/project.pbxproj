@@ -22,6 +22,8 @@
 		3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2322B3512E008A787A /* RegistrationViewController.swift */; };
 		3FF02C2622B37D81008A787A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2522B37D81008A787A /* LoginViewController.swift */; };
 		3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2722B386FA008A787A /* ResetPasswordViewController.swift */; };
+		7D3C990496F7B10C4FF7ADFB /* Pods_FeastViteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E941534907915312AAC5C25 /* Pods_FeastViteUITests.framework */; };
+		CEC89F721A4BEEC9D4B6F295 /* Pods_FeastViteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B02A1AF32BD20F9701DB1C0 /* Pods_FeastViteTests.framework */; };
 		E46066C30D9D02AE19B9EE32 /* Pods_FeastVite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D2D216AF151BFC171ED95F /* Pods_FeastVite.framework */; };
 		E83B11C422D02CF600B8175D /* FeastViteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11C322D02CF600B8175D /* FeastViteUITests.swift */; };
 		E83B11CD22D02DDA00B8175D /* FeastViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11B522D02CEC00B8175D /* FeastViteTests.swift */; };
@@ -58,7 +60,7 @@
 		3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNewPasswordControllerViewController.swift; sourceTree = "<group>"; };
 		3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3F63B2D022BD438E0058302B /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		3F8C989B22B18CA3009E1371 /* FeastVite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeastVite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F8C989B22B18CA3009E1371 /* FeastVitePOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeastVitePOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8C989E22B18CA3009E1371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8C98A022B18CA3009E1371 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F8C98A322B18CA3009E1371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,10 +78,10 @@
 		6274C046F22115BB7E5E36C3 /* Pods-FeastVite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVite/Pods-FeastVite.debug.xcconfig"; sourceTree = "<group>"; };
 		8F34340EB0AE6A837141A14E /* Pods-FeastVite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVite.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVite/Pods-FeastVite.release.xcconfig"; sourceTree = "<group>"; };
 		C2A15207C44E5FCB7B496D96 /* Pods-FeastViteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastViteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastViteUITests/Pods-FeastViteUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E83B11B322D02CEC00B8175D /* FeastViteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastViteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83B11B322D02CEC00B8175D /* FeastVitePOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastVitePOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83B11B522D02CEC00B8175D /* FeastViteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastViteTests.swift; sourceTree = "<group>"; };
 		E83B11B722D02CEC00B8175D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E83B11C122D02CF600B8175D /* FeastViteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastViteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83B11C122D02CF600B8175D /* FeastVitePOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastVitePOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83B11C322D02CF600B8175D /* FeastViteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastViteUITests.swift; sourceTree = "<group>"; };
 		E83B11C522D02CF600B8175D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCellCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC89F721A4BEEC9D4B6F295 /* Pods_FeastViteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3C990496F7B10C4FF7ADFB /* Pods_FeastViteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,9 +156,9 @@
 		3F8C989C22B18CA3009E1371 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F8C989B22B18CA3009E1371 /* FeastVite.app */,
-				E83B11B322D02CEC00B8175D /* FeastViteTests.xctest */,
-				E83B11C122D02CF600B8175D /* FeastViteUITests.xctest */,
+				3F8C989B22B18CA3009E1371 /* FeastVitePOC.app */,
+				E83B11B322D02CEC00B8175D /* FeastVitePOCTests.xctest */,
+				E83B11C122D02CF600B8175D /* FeastVitePOCUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F8C989A22B18CA3009E1371 /* FeastVite */ = {
+		3F8C989A22B18CA3009E1371 /* FeastVitePOC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F8C98C322B18CA5009E1371 /* Build configuration list for PBXNativeTarget "FeastVite" */;
+			buildConfigurationList = 3F8C98C322B18CA5009E1371 /* Build configuration list for PBXNativeTarget "FeastVitePOC" */;
 			buildPhases = (
 				A0574C76C6AEB2EE6A5D910D /* [CP] Check Pods Manifest.lock */,
 				3F8C989722B18CA3009E1371 /* Sources */,
@@ -243,15 +247,16 @@
 			);
 			dependencies = (
 			);
-			name = FeastVite;
+			name = FeastVitePOC;
 			productName = FeastVite;
-			productReference = 3F8C989B22B18CA3009E1371 /* FeastVite.app */;
+			productReference = 3F8C989B22B18CA3009E1371 /* FeastVitePOC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E83B11B222D02CEC00B8175D /* FeastViteTests */ = {
+		E83B11B222D02CEC00B8175D /* FeastVitePOCTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E83B11BA22D02CEC00B8175D /* Build configuration list for PBXNativeTarget "FeastViteTests" */;
+			buildConfigurationList = E83B11BA22D02CEC00B8175D /* Build configuration list for PBXNativeTarget "FeastVitePOCTests" */;
 			buildPhases = (
+				38247B09B9E7C90D4430564C /* [CP] Check Pods Manifest.lock */,
 				E83B11AF22D02CEC00B8175D /* Sources */,
 				E83B11B022D02CEC00B8175D /* Frameworks */,
 				E83B11B122D02CEC00B8175D /* Resources */,
@@ -261,15 +266,16 @@
 			dependencies = (
 				E83B11B922D02CEC00B8175D /* PBXTargetDependency */,
 			);
-			name = FeastViteTests;
+			name = FeastVitePOCTests;
 			productName = FeastViteTests;
-			productReference = E83B11B322D02CEC00B8175D /* FeastViteTests.xctest */;
+			productReference = E83B11B322D02CEC00B8175D /* FeastVitePOCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E83B11C022D02CF600B8175D /* FeastViteUITests */ = {
+		E83B11C022D02CF600B8175D /* FeastVitePOCUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E83B11C822D02CF600B8175D /* Build configuration list for PBXNativeTarget "FeastViteUITests" */;
+			buildConfigurationList = E83B11C822D02CF600B8175D /* Build configuration list for PBXNativeTarget "FeastVitePOCUITests" */;
 			buildPhases = (
+				00E4D2B1550958AC92AF9F88 /* [CP] Check Pods Manifest.lock */,
 				E83B11BD22D02CF600B8175D /* Sources */,
 				E83B11BE22D02CF600B8175D /* Frameworks */,
 				E83B11BF22D02CF600B8175D /* Resources */,
@@ -279,9 +285,9 @@
 			dependencies = (
 				E83B11C722D02CF600B8175D /* PBXTargetDependency */,
 			);
-			name = FeastViteUITests;
+			name = FeastVitePOCUITests;
 			productName = FeastViteUITests;
-			productReference = E83B11C122D02CF600B8175D /* FeastViteUITests.xctest */;
+			productReference = E83B11C122D02CF600B8175D /* FeastVitePOCUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +313,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3F8C989622B18CA3009E1371 /* Build configuration list for PBXProject "FeastVite" */;
+			buildConfigurationList = 3F8C989622B18CA3009E1371 /* Build configuration list for PBXProject "FeastVitePOC" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -320,9 +326,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F8C989A22B18CA3009E1371 /* FeastVite */,
-				E83B11B222D02CEC00B8175D /* FeastViteTests */,
-				E83B11C022D02CF600B8175D /* FeastViteUITests */,
+				3F8C989A22B18CA3009E1371 /* FeastVitePOC */,
+				E83B11B222D02CEC00B8175D /* FeastVitePOCTests */,
+				E83B11C022D02CF600B8175D /* FeastVitePOCUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -355,6 +361,50 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00E4D2B1550958AC92AF9F88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FeastViteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		38247B09B9E7C90D4430564C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FeastViteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A0574C76C6AEB2EE6A5D910D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -438,12 +488,12 @@
 /* Begin PBXTargetDependency section */
 		E83B11B922D02CEC00B8175D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3F8C989A22B18CA3009E1371 /* FeastVite */;
+			target = 3F8C989A22B18CA3009E1371 /* FeastVitePOC */;
 			targetProxy = E83B11B822D02CEC00B8175D /* PBXContainerItemProxy */;
 		};
 		E83B11C722D02CF600B8175D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3F8C989A22B18CA3009E1371 /* FeastVite */;
+			target = 3F8C989A22B18CA3009E1371 /* FeastVitePOC */;
 			targetProxy = E83B11C622D02CF600B8175D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -598,7 +648,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nwmsu.FeastVite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nwmsu.FeastVitePOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
@@ -621,7 +671,7 @@
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nwmsu.FeastVite;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nwmsu.FeastVitePOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Pods/Backendless/SDK/ios/backendless/include/Backendless-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
@@ -631,6 +681,7 @@
 		};
 		E83B11BB22D02CEC00B8175D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368CC78A4FC845A031583FB4 /* Pods-FeastViteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -647,12 +698,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeastVite.app/FeastVite";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeastVitePOC.app/FeastVitePOC";
 			};
 			name = Debug;
 		};
 		E83B11BC22D02CEC00B8175D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A17D984AF52F30257982827 /* Pods-FeastViteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -669,12 +721,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeastVite.app/FeastVite";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeastVitePOC.app/FeastVitePOC";
 			};
 			name = Release;
 		};
 		E83B11C922D02CF600B8175D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46F7AC8EEB64521D349BF8D7 /* Pods-FeastViteUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -695,6 +748,7 @@
 		};
 		E83B11CA22D02CF600B8175D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2A15207C44E5FCB7B496D96 /* Pods-FeastViteUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -716,7 +770,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F8C989622B18CA3009E1371 /* Build configuration list for PBXProject "FeastVite" */ = {
+		3F8C989622B18CA3009E1371 /* Build configuration list for PBXProject "FeastVitePOC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F8C98C122B18CA5009E1371 /* Debug */,
@@ -725,7 +779,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F8C98C322B18CA5009E1371 /* Build configuration list for PBXNativeTarget "FeastVite" */ = {
+		3F8C98C322B18CA5009E1371 /* Build configuration list for PBXNativeTarget "FeastVitePOC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F8C98C422B18CA5009E1371 /* Debug */,
@@ -734,7 +788,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E83B11BA22D02CEC00B8175D /* Build configuration list for PBXNativeTarget "FeastViteTests" */ = {
+		E83B11BA22D02CEC00B8175D /* Build configuration list for PBXNativeTarget "FeastVitePOCTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E83B11BB22D02CEC00B8175D /* Debug */,
@@ -743,7 +797,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E83B11C822D02CF600B8175D /* Build configuration list for PBXNativeTarget "FeastViteUITests" */ = {
+		E83B11C822D02CF600B8175D /* Build configuration list for PBXNativeTarget "FeastVitePOCUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E83B11C922D02CF600B8175D /* Debug */,

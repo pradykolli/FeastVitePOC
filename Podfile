@@ -4,7 +4,7 @@
 target 'FeastVite' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
- 
+
   # Pods for FeastVite
 
   target 'FeastViteTests' do
@@ -16,5 +16,5 @@ target 'FeastVite' do
     inherit! :search_paths
     # Pods for testing
   end
-pod 'Backendless'
+	pod 'Backendless'
 end

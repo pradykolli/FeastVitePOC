@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:FeastVite.xcodeproj">
+      location = "group:/Users/pradykolli/Downloads/FeastVitePOC/FeastVitePOC.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
