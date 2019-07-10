@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1AC95D7EDFF870DDF2A9A913 /* Pods_FeastVitePOCUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CD0D722C0AF73335A91973C /* Pods_FeastVitePOCUITests.framework */; };
 		3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */; };
 		3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */; };
 		3F63B2D122BD438E0058302B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2D022BD438E0058302B /* Errors.swift */; };
@@ -20,9 +21,6 @@
 		3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2322B3512E008A787A /* RegistrationViewController.swift */; };
 		3FF02C2622B37D81008A787A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2522B37D81008A787A /* LoginViewController.swift */; };
 		3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2722B386FA008A787A /* ResetPasswordViewController.swift */; };
-		7D3C990496F7B10C4FF7ADFB /* Pods_FeastViteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E941534907915312AAC5C25 /* Pods_FeastViteUITests.framework */; };
-		CEC89F721A4BEEC9D4B6F295 /* Pods_FeastViteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B02A1AF32BD20F9701DB1C0 /* Pods_FeastViteTests.framework */; };
-		E46066C30D9D02AE19B9EE32 /* Pods_FeastVite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08D2D216AF151BFC171ED95F /* Pods_FeastVite.framework */; };
 		E83B11C422D02CF600B8175D /* FeastViteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11C322D02CF600B8175D /* FeastViteUITests.swift */; };
 		E83B11CD22D02DDA00B8175D /* FeastViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11B522D02CEC00B8175D /* FeastViteTests.swift */; };
 		E83B11CF22D06E8100B8175D /* TemplateCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */; };
@@ -30,6 +28,8 @@
 		E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */; };
 		E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */; };
 		E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */; };
+		F065B3595D0FC9F30C4F43E7 /* Pods_FeastVitePOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B7E1FC757198C6B6FB1346 /* Pods_FeastVitePOC.framework */; };
+		FDD8A6EFC5FC6E65A40687C3 /* Pods_FeastVitePOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C913D8181FCA1B10C9D56 /* Pods_FeastVitePOCTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +50,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08D2D216AF151BFC171ED95F /* Pods_FeastVite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastVite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A17D984AF52F30257982827 /* Pods-FeastViteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastViteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastViteTests/Pods-FeastViteTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A9F284B22B890D500DB1111 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2A9F284D22B8A70700DB1111 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		2B02A1AF32BD20F9701DB1C0 /* Pods_FeastViteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastViteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		368CC78A4FC845A031583FB4 /* Pods-FeastViteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastViteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastViteTests/Pods-FeastViteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		38D2E60E2503D02527D9F967 /* Pods-FeastVitePOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOC/Pods-FeastVitePOC.release.xcconfig"; sourceTree = "<group>"; };
 		3F23B5DB22C152C30054CF72 /* contacts.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = contacts.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNewPasswordControllerViewController.swift; sourceTree = "<group>"; };
 		3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -74,10 +73,16 @@
 		3FF02C2722B386FA008A787A /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		3FF2BAEF22CA68ED000622F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		46F7AC8EEB64521D349BF8D7 /* Pods-FeastViteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastViteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastViteUITests/Pods-FeastViteUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4E941534907915312AAC5C25 /* Pods_FeastViteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastViteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51B7E1FC757198C6B6FB1346 /* Pods_FeastVitePOC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastVitePOC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6274C046F22115BB7E5E36C3 /* Pods-FeastVite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVite/Pods-FeastVite.debug.xcconfig"; sourceTree = "<group>"; };
+		665C913D8181FCA1B10C9D56 /* Pods_FeastVitePOCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastVitePOCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD0D722C0AF73335A91973C /* Pods_FeastVitePOCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastVitePOCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F34340EB0AE6A837141A14E /* Pods-FeastVite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVite.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVite/Pods-FeastVite.release.xcconfig"; sourceTree = "<group>"; };
+		B8DBBE0736BC6D7DC5C58E0F /* Pods-FeastVitePOC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOC/Pods-FeastVitePOC.debug.xcconfig"; sourceTree = "<group>"; };
 		C2A15207C44E5FCB7B496D96 /* Pods-FeastViteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastViteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastViteUITests/Pods-FeastViteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D967E4A8E9B7F40C39777CCC /* Pods-FeastVitePOCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCUITests/Pods-FeastVitePOCUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E234134AEE47C3C31E883EC5 /* Pods-FeastVitePOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCTests/Pods-FeastVitePOCTests.release.xcconfig"; sourceTree = "<group>"; };
+		E7F279298FE865C07AB799EE /* Pods-FeastVitePOCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCTests/Pods-FeastVitePOCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E83B11B322D02CEC00B8175D /* FeastVitePOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastVitePOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83B11B522D02CEC00B8175D /* FeastViteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastViteTests.swift; sourceTree = "<group>"; };
 		E83B11B722D02CEC00B8175D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +94,7 @@
 		E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTemplatesCollectionViewController.swift; sourceTree = "<group>"; };
 		E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTemplateImageViewController.swift; sourceTree = "<group>"; };
+		FCD3BF5F7F1DFEAF82A99C26 /* Pods-FeastVitePOCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCUITests/Pods-FeastVitePOCUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E46066C30D9D02AE19B9EE32 /* Pods_FeastVite.framework in Frameworks */,
+				F065B3595D0FC9F30C4F43E7 /* Pods_FeastVitePOC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEC89F721A4BEEC9D4B6F295 /* Pods_FeastViteTests.framework in Frameworks */,
+				FDD8A6EFC5FC6E65A40687C3 /* Pods_FeastVitePOCTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D3C990496F7B10C4FF7ADFB /* Pods_FeastViteUITests.framework in Frameworks */,
+				1AC95D7EDFF870DDF2A9A913 /* Pods_FeastVitePOCUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,9 +183,9 @@
 				3FF2BAEF22CA68ED000622F8 /* Foundation.framework */,
 				2A9F284D22B8A70700DB1111 /* libsqlite3.0.tbd */,
 				2A9F284B22B890D500DB1111 /* libsqlite3.tbd */,
-				08D2D216AF151BFC171ED95F /* Pods_FeastVite.framework */,
-				2B02A1AF32BD20F9701DB1C0 /* Pods_FeastViteTests.framework */,
-				4E941534907915312AAC5C25 /* Pods_FeastViteUITests.framework */,
+				51B7E1FC757198C6B6FB1346 /* Pods_FeastVitePOC.framework */,
+				665C913D8181FCA1B10C9D56 /* Pods_FeastVitePOCTests.framework */,
+				6CD0D722C0AF73335A91973C /* Pods_FeastVitePOCUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -193,6 +199,12 @@
 				0A17D984AF52F30257982827 /* Pods-FeastViteTests.release.xcconfig */,
 				46F7AC8EEB64521D349BF8D7 /* Pods-FeastViteUITests.debug.xcconfig */,
 				C2A15207C44E5FCB7B496D96 /* Pods-FeastViteUITests.release.xcconfig */,
+				B8DBBE0736BC6D7DC5C58E0F /* Pods-FeastVitePOC.debug.xcconfig */,
+				38D2E60E2503D02527D9F967 /* Pods-FeastVitePOC.release.xcconfig */,
+				E7F279298FE865C07AB799EE /* Pods-FeastVitePOCTests.debug.xcconfig */,
+				E234134AEE47C3C31E883EC5 /* Pods-FeastVitePOCTests.release.xcconfig */,
+				FCD3BF5F7F1DFEAF82A99C26 /* Pods-FeastVitePOCUITests.debug.xcconfig */,
+				D967E4A8E9B7F40C39777CCC /* Pods-FeastVitePOCUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -390,7 +402,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FeastViteUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FeastVitePOCUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -412,7 +424,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FeastViteTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FeastVitePOCTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -434,7 +446,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FeastVite-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FeastVitePOC-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -447,15 +459,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FeastVite/Pods-FeastVite-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FeastVitePOC/Pods-FeastVitePOC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FeastVite/Pods-FeastVite-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FeastVitePOC/Pods-FeastVitePOC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeastVite/Pods-FeastVite-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeastVitePOC/Pods-FeastVitePOC-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -652,7 +664,7 @@
 		};
 		3F8C98C422B18CA5009E1371 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6274C046F22115BB7E5E36C3 /* Pods-FeastVite.debug.xcconfig */;
+			baseConfigurationReference = B8DBBE0736BC6D7DC5C58E0F /* Pods-FeastVitePOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -675,7 +687,7 @@
 		};
 		3F8C98C522B18CA5009E1371 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F34340EB0AE6A837141A14E /* Pods-FeastVite.release.xcconfig */;
+			baseConfigurationReference = 38D2E60E2503D02527D9F967 /* Pods-FeastVitePOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -697,7 +709,7 @@
 		};
 		E83B11BB22D02CEC00B8175D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 368CC78A4FC845A031583FB4 /* Pods-FeastViteTests.debug.xcconfig */;
+			baseConfigurationReference = E7F279298FE865C07AB799EE /* Pods-FeastVitePOCTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -720,7 +732,7 @@
 		};
 		E83B11BC22D02CEC00B8175D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A17D984AF52F30257982827 /* Pods-FeastViteTests.release.xcconfig */;
+			baseConfigurationReference = E234134AEE47C3C31E883EC5 /* Pods-FeastVitePOCTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -743,7 +755,7 @@
 		};
 		E83B11C922D02CF600B8175D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 46F7AC8EEB64521D349BF8D7 /* Pods-FeastViteUITests.debug.xcconfig */;
+			baseConfigurationReference = FCD3BF5F7F1DFEAF82A99C26 /* Pods-FeastVitePOCUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
@@ -764,7 +776,7 @@
 		};
 		E83B11CA22D02CF600B8175D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2A15207C44E5FCB7B496D96 /* Pods-FeastViteUITests.release.xcconfig */;
+			baseConfigurationReference = D967E4A8E9B7F40C39777CCC /* Pods-FeastVitePOCUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
