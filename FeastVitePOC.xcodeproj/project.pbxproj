@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A9F284722B84E1000DB1111 /* DataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F284622B84E1000DB1111 /* DataBaseManager.swift */; };
-		2A9F284A22B88DD600DB1111 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9F284922B88DD600DB1111 /* UserModel.swift */; };
 		3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */; };
 		3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */; };
 		3F63B2D122BD438E0058302B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2D022BD438E0058302B /* Errors.swift */; };
@@ -28,6 +26,10 @@
 		E83B11C422D02CF600B8175D /* FeastViteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11C322D02CF600B8175D /* FeastViteUITests.swift */; };
 		E83B11CD22D02DDA00B8175D /* FeastViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11B522D02CEC00B8175D /* FeastViteTests.swift */; };
 		E83B11CF22D06E8100B8175D /* TemplateCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */; };
+		E8B19B3122D55FA600FB6D5A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2722D55FA600FB6D5A /* PreviewViewController.swift */; };
+		E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */; };
+		E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */; };
+		E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +52,6 @@
 /* Begin PBXFileReference section */
 		08D2D216AF151BFC171ED95F /* Pods_FeastVite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastVite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A17D984AF52F30257982827 /* Pods-FeastViteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastViteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastViteTests/Pods-FeastViteTests.release.xcconfig"; sourceTree = "<group>"; };
-		2A9F284622B84E1000DB1111 /* DataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseManager.swift; sourceTree = "<group>"; };
-		2A9F284922B88DD600DB1111 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		2A9F284B22B890D500DB1111 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		2A9F284D22B8A70700DB1111 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		2B02A1AF32BD20F9701DB1C0 /* Pods_FeastViteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeastViteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +85,10 @@
 		E83B11C322D02CF600B8175D /* FeastViteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastViteUITests.swift; sourceTree = "<group>"; };
 		E83B11C522D02CF600B8175D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCellCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8B19B2722D55FA600FB6D5A /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTemplatesCollectionViewController.swift; sourceTree = "<group>"; };
+		E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTemplateImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,18 +119,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A9F284522B817ED00DB1111 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				2A9F284622B84E1000DB1111 /* DataBaseManager.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		2A9F284822B88DBC00DB1111 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2A9F284922B88DD600DB1111 /* UserModel.swift */,
+				3F23B5DB22C152C30054CF72 /* contacts.playground */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,7 +139,6 @@
 		3F8C989222B18CA3009E1371 = {
 			isa = PBXGroup;
 			children = (
-				3F23B5DB22C152C30054CF72 /* contacts.playground */,
 				3F8C989D22B18CA3009E1371 /* FeastVite */,
 				E83B11B422D02CEC00B8175D /* FeastViteTests */,
 				E83B11C222D02CF600B8175D /* FeastViteUITests */,
@@ -166,22 +161,12 @@
 		3F8C989D22B18CA3009E1371 /* FeastVite */ = {
 			isa = PBXGroup;
 			children = (
+				E8B19B3B22D57F9D00FB6D5A /* viewControllers */,
+				E8B19B3A22D57F7600FB6D5A /* storyBoarding */,
 				3F63B2CF22BD436F0058302B /* utils */,
 				2A9F284822B88DBC00DB1111 /* Models */,
-				2A9F284522B817ED00DB1111 /* Helpers */,
-				3FF02C2522B37D81008A787A /* LoginViewController.swift */,
-				3FCADC3422C1C4A000705A32 /* MailSenderViewController.swift */,
-				3F8C989E22B18CA3009E1371 /* AppDelegate.swift */,
-				3F8C98A022B18CA3009E1371 /* ViewController.swift */,
-				3F8C98A222B18CA3009E1371 /* Main.storyboard */,
 				3F8C98A522B18CA5009E1371 /* Assets.xcassets */,
-				3F8C98A722B18CA5009E1371 /* LaunchScreen.storyboard */,
 				3F8C98AA22B18CA5009E1371 /* Info.plist */,
-				3FF02C2322B3512E008A787A /* RegistrationViewController.swift */,
-				3FF02C2722B386FA008A787A /* ResetPasswordViewController.swift */,
-				3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */,
-				3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */,
-				E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */,
 			);
 			path = FeastVite;
 			sourceTree = "<group>";
@@ -228,6 +213,35 @@
 				E83B11C522D02CF600B8175D /* Info.plist */,
 			);
 			path = FeastViteUITests;
+			sourceTree = "<group>";
+		};
+		E8B19B3A22D57F7600FB6D5A /* storyBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				3F8C98A222B18CA3009E1371 /* Main.storyboard */,
+				3F8C98A722B18CA5009E1371 /* LaunchScreen.storyboard */,
+			);
+			path = storyBoarding;
+			sourceTree = "<group>";
+		};
+		E8B19B3B22D57F9D00FB6D5A /* viewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */,
+				E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */,
+				E8B19B2722D55FA600FB6D5A /* PreviewViewController.swift */,
+				E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */,
+				3FF02C2522B37D81008A787A /* LoginViewController.swift */,
+				3FCADC3422C1C4A000705A32 /* MailSenderViewController.swift */,
+				3F8C989E22B18CA3009E1371 /* AppDelegate.swift */,
+				3F8C98A022B18CA3009E1371 /* ViewController.swift */,
+				3FF02C2322B3512E008A787A /* RegistrationViewController.swift */,
+				3FF02C2722B386FA008A787A /* ResetPasswordViewController.swift */,
+				3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */,
+				3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */,
+				E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */,
+			);
+			path = viewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -454,14 +468,16 @@
 				3FCADC3522C1C4A000705A32 /* MailSenderViewController.swift in Sources */,
 				3FF02C2622B37D81008A787A /* LoginViewController.swift in Sources */,
 				E83B11CF22D06E8100B8175D /* TemplateCellCollectionViewCell.swift in Sources */,
-				2A9F284A22B88DD600DB1111 /* UserModel.swift in Sources */,
+				E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */,
 				3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */,
 				3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */,
 				3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */,
+				E8B19B3122D55FA600FB6D5A /* PreviewViewController.swift in Sources */,
 				3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */,
 				3F63B2D122BD438E0058302B /* Errors.swift in Sources */,
 				3F8C98A122B18CA3009E1371 /* ViewController.swift in Sources */,
-				2A9F284722B84E1000DB1111 /* DataBaseManager.swift in Sources */,
+				E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */,
+				E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */,
 				3F8C989F22B18CA3009E1371 /* AppDelegate.swift in Sources */,
 				3FBFFC1B22C45B59007C1182 /* Authentication.swift in Sources */,
 			);

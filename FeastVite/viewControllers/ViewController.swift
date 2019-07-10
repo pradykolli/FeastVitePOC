@@ -1,13 +1,12 @@
 //
 //  ViewController.swift
-//  FeastVite
+//  FeastVitePOC
 //
-//  Created by student on 6/12/19.
+//  Created by student on 6/13/19.
 //  Copyright © 2019 NWMSU. All rights reserved.
 //
 
 import UIKit
-//import MessageUI
 
 class ViewController: UIViewController {
 
@@ -15,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+
 
 }
 

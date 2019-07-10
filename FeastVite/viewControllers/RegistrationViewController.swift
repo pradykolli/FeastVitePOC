@@ -26,7 +26,7 @@ class RegistrationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var resendBTN: UIButton!
     private var isAdding : Bool = true
-    private var user : UserModel?
+//    private var user : UserModel?
     override func viewDidLoad() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(showPasswordTapped(_:)))
         showHidePassword.addGestureRecognizer(tap)

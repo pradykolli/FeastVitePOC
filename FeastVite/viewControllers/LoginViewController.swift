@@ -139,8 +139,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if self.stayLoggedInSwitch.isOn{
                 self.backendless?.userService.setStayLoggedIn(true)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let homePageController = storyboard.instantiateViewController(withIdentifier: "homePage") as! HomePageViewController
-                self.navigationController?.pushViewController(homePageController, animated: true)
+//                let homePageController = storyboard.instantiateViewController(withIdentifier: "homePage") as! HomePageViewController
+//                self.navigationController?.pushViewController(homePageController, animated: true)
+                let homeTabController = storyboard.instantiateViewController(withIdentifier: "HomeTabController") as! UITabBarController
+                self.present(homeTabController, animated: true, completion: nil)
                 if (loginValidUser != nil){
                     isValid = true
                 }
@@ -148,8 +150,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             else{
                 self.backendless?.userService.setStayLoggedIn(false)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let homePageController = storyboard.instantiateViewController(withIdentifier: "homePage") as! HomePageViewController
-                self.navigationController?.pushViewController(homePageController, animated: true)
+                let homeTabController = storyboard.instantiateViewController(withIdentifier: "HomeTabController") as! UITabBarController
+                self.navigationController?.pushViewController(homeTabController, animated: true)
                 if (loginValidUser != nil){
                     isValid = true
                 }
