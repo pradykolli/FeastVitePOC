@@ -21,6 +21,9 @@
 		3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2322B3512E008A787A /* RegistrationViewController.swift */; };
 		3FF02C2622B37D81008A787A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2522B37D81008A787A /* LoginViewController.swift */; };
 		3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2722B386FA008A787A /* ResetPasswordViewController.swift */; };
+		E82EF4FC22D595E30095264A /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EF4FB22D595E30095264A /* AccountsViewController.swift */; };
+		E82EF4FE22D598C20095264A /* TemplateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EF4FD22D598C20095264A /* TemplateModel.swift */; };
+		E82EF50022D59E290095264A /* TemplateModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82EF4FF22D59E290095264A /* TemplateModelManager.swift */; };
 		E83B11C422D02CF600B8175D /* FeastViteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11C322D02CF600B8175D /* FeastViteUITests.swift */; };
 		E83B11CD22D02DDA00B8175D /* FeastViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11B522D02CEC00B8175D /* FeastViteTests.swift */; };
 		E83B11CF22D06E8100B8175D /* TemplateCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */; };
@@ -83,6 +86,9 @@
 		D967E4A8E9B7F40C39777CCC /* Pods-FeastVitePOCUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCUITests/Pods-FeastVitePOCUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E234134AEE47C3C31E883EC5 /* Pods-FeastVitePOCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCTests/Pods-FeastVitePOCTests.release.xcconfig"; sourceTree = "<group>"; };
 		E7F279298FE865C07AB799EE /* Pods-FeastVitePOCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCTests/Pods-FeastVitePOCTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E82EF4FB22D595E30095264A /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
+		E82EF4FD22D598C20095264A /* TemplateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModel.swift; sourceTree = "<group>"; };
+		E82EF4FF22D59E290095264A /* TemplateModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateModelManager.swift; sourceTree = "<group>"; };
 		E83B11B322D02CEC00B8175D /* FeastVitePOCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeastVitePOCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83B11B522D02CEC00B8175D /* FeastViteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeastViteTests.swift; sourceTree = "<group>"; };
 		E83B11B722D02CEC00B8175D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				3F23B5DB22C152C30054CF72 /* contacts.playground */,
+				E82EF4FD22D598C20095264A /* TemplateModel.swift */,
+				E82EF4FF22D59E290095264A /* TemplateModelManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 				3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */,
 				3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */,
 				E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */,
+				E82EF4FB22D595E30095264A /* AccountsViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -483,12 +492,15 @@
 				E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */,
 				3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */,
 				3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */,
+				E82EF4FC22D595E30095264A /* AccountsViewController.swift in Sources */,
 				3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */,
 				E8B19B3122D55FA600FB6D5A /* PreviewViewController.swift in Sources */,
 				3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */,
 				3F63B2D122BD438E0058302B /* Errors.swift in Sources */,
 				3F8C98A122B18CA3009E1371 /* ViewController.swift in Sources */,
 				E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */,
+				E82EF50022D59E290095264A /* TemplateModelManager.swift in Sources */,
+				E82EF4FE22D598C20095264A /* TemplateModel.swift in Sources */,
 				E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */,
 				3F8C989F22B18CA3009E1371 /* AppDelegate.swift in Sources */,
 				3FBFFC1B22C45B59007C1182 /* Authentication.swift in Sources */,

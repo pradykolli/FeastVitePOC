@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import FeastVite
+@testable import FeastVitePOC
 
 
 class FeastViteTests: XCTestCase {

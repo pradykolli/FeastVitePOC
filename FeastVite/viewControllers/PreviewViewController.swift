@@ -29,11 +29,6 @@ extension UIImageView {
 }
 class PreviewViewController: UIViewController {
 
-    @IBOutlet weak var phone: UILabel!
-    @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var venue: UILabel!
-    @IBOutlet weak var eventTitle: UILabel!
-    @IBOutlet weak var date: UILabel!
     let templateObject = Template.shared
     @IBOutlet weak var previewImg: UIImageView!
     var label:UILabel!
@@ -43,24 +38,18 @@ class PreviewViewController: UIViewController {
     var frameSizeHeight:CGFloat = 0
     var frameSizeWidth:CGFloat = 0
     var imageRectExtOut:CGRect = CGRect(x: 0, y: 0, width: 0, height: 0)
-//    var dummyData =
-        override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
-//            previewImg.set = imageText.size.width
-//            previewImg.frame.height = imageText.size.height
-//            imageText = addTextToImage(text: totalDetails!, inImage: imageDummy, atPoint: CGPoint(x: 20, y: 20))
             previewImg.image = imageText
             frameSizeWidth = previewImg.frame.width
             frameSizeHeight = previewImg.frame.height
             imageRectExtOut = previewImg.contentClippingRect
             print("previewImage text : \(imageRectExtOut.size.height)")
-            
-
     }
     
     
     func addTextToImage(eventDetails: [Template], inImage: UIImage, atPoint:CGPoint) -> UIImage{
-//       label.drawText(in: CGRect(x: 0, y: 0, width: inImage.size.width, height: inImage.size.height))
         // Setup the font specific variables
         let textColor = UIColor.white
         let textFont = UIFont(name: "HelveticaNeue", size: 500)
@@ -77,25 +66,27 @@ class PreviewViewController: UIViewController {
         
         //Put the image into a rectangle as large as the original image.
         inImage.draw(in: CGRect(x: 0, y: 0, width: inImage.size.width, height: inImage.size.height))
+        
         // Our drawing bounds
         let drawingBounds = CGRect(x:0.0, y:0.0, width:inImage.size.width, height:inImage.size.height)
 
             let text1 = eventDetails[0].eventType as NSString
-            let textSize = text1.size(withAttributes: [NSAttributedString.Key.font:textFont])
+        let textSize = text1.size(withAttributes: [NSAttributedString.Key.font:textFont!])
             let textRect = CGRect(x:drawingBounds.size.width/2 - textSize.width/2, y: imageRectExtOut.size.height,
                                   width:textSize.width, height:textSize.height)
-            text1.draw(in: textRect, withAttributes: textFontAttributes)
+        text1.draw(in: textRect, withAttributes: textFontAttributes as [NSAttributedString.Key : Any])
 
        
         
         // Get the image from the graphics context
         let newImag = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
+        imageDummy = newImag!
         return newImag!
         
     }
 
+  
     /*
     // MARK: - Navigation
 

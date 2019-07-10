@@ -12,8 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
-    let APP_ID = "6B431DD2-8542-B800-FF7A-7947839BF900"  //this is the appID for backendless
-    let API_KEY = "1643FEC4-7340-94C2-FF84-C9AD577E4800"//and the API key for backendless
+    let APP_ID = "0AD753EE-CEF8-AE2D-FF46-4923F059BE00"  //this is the appID for backendless
+    let API_KEY = "1CABE429-72C0-EBAA-FF04-7D9146269D00"//and the API key for backendless
     let backendless = Backendless.sharedInstance()
     
     var window: UIWindow?

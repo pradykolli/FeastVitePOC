@@ -89,7 +89,18 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
             previewController.imageText = imageSample
         }
     }
-    
+    @IBAction func saveActionBTN(_ sender: Any) {
+        let templateObj = TemplateModel()
+        let pc:PreviewViewController = PreviewViewController()
+        let imageSample = pc.addTextToImage(eventDetails: templateView(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
+        templateObj.eventType = eventTypeTF.text!
+        templateObj.eventDateTime = dateTF.text!
+        templateObj.eventVenue = venueTF.text!
+        templateObj.eventWelcomeMessage = personalMessageTF.text!
+        templateObj.templateImage = imageSample
+        templateObj.templateName = "temp"
+        TemplateModelManager.shared.addTemplate(template: templateObj)
+    }
     /*
     // MARK: - Navigation
 

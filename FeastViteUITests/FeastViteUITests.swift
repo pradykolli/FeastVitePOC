@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import FeastVite
+@testable import FeastVitePOC
 class FeastViteUITests: XCTestCase {
     var app:XCUIApplication!
     override func setUp() {

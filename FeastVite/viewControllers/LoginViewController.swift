@@ -109,7 +109,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             passwordTF.layer.borderColor = UIColor.green.cgColor
             let userEmail = emailTF.text!
             let userPassword = passwordTF.text!
-            var isLoggedin = loginUser(email: userEmail, password: userPassword)
+            loginUser(email: userEmail, password: userPassword)
         }
     }
 //    Reset password button by Pradeep Kolli
@@ -139,8 +139,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             if self.stayLoggedInSwitch.isOn{
                 self.backendless?.userService.setStayLoggedIn(true)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let homePageController = storyboard.instantiateViewController(withIdentifier: "homePage") as! HomePageViewController
-//                self.navigationController?.pushViewController(homePageController, animated: true)
                 let homeTabController = storyboard.instantiateViewController(withIdentifier: "HomeTabController") as! UITabBarController
                 self.present(homeTabController, animated: true, completion: nil)
                 if (loginValidUser != nil){
