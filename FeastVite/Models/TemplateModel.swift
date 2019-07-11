@@ -11,7 +11,7 @@ import UIKit
 
 class TemplateModel : NSObject {
     
-    var templateImage:UIImage!
+    var templateImage:String!
     var templateName:String!
     var eventType:String!
     var eventDateTime:String!
@@ -26,7 +26,7 @@ class TemplateModel : NSObject {
     }
     
     override init(){
-        templateImage = UIImage(named: "bg")
+        templateImage = ""
         templateName = "New Template"
         eventType = "Birthday"
         eventDateTime = "10/10/2019 18:30"

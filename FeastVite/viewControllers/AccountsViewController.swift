@@ -8,12 +8,13 @@
 
 import UIKit
 
-class AccountsViewController: UITabBarController {
+class AccountsViewController: UIViewController {
     var backendless:Backendless!
     var alerts:AlertErrors = AlertErrors()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("in accounts")
         backendless = Backendless.sharedInstance()!
 
         // Do any additional setup after loading the view.
@@ -21,10 +22,10 @@ class AccountsViewController: UITabBarController {
     
     @IBAction func logOutBTN(_ sender: Any) {
         backendless.userService.logout({
-            self.navigationController?.popToRootViewController(animated: true)
         }) { (fault:Fault?) in
             self.alerts.displayAlert("Server Error", (fault?.message)!)
         }
+        
     }
     
     /*

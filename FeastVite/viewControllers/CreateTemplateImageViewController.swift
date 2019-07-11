@@ -81,7 +81,43 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         return eventData
     }
     
+    /**
+     * Created by Pradeep Kolli
+     
+     * This method is used to encode the final image we get after printing event details on it into a string of line length 64
+     
+     * @param  {UIImage} baseImage      [This param sends the baseImage to be encoded to the method]
+     
+     */
+    func encodeToBase64String(fromImage:UIImage) -> String{
+        //Now use image to create into NSData format
+        let imageData:Data = fromImage.pngData()!
+        let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+        return strBase64
+    }
+    /**
+     * Created by Pradeep Kolli
+     
+     * This method is used to decode the base64 encoded String into a UIImage
+     
+     * @param  {String} fromString      [This param sends the base64 encoded String to be deocded to the method]
+     
+     */
+    func decodeToImage(fromString:String) -> UIImage{
+        let dataDecoded:Data = Data(base64Encoded: fromString, options: .ignoreUnknownCharacters)!
+        let decodedimage:UIImage = UIImage(data: dataDecoded)!
+        return decodedimage
+    }
     
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "previewImage"){
             let previewController = segue.destination as! PreviewViewController
@@ -92,25 +128,17 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
     @IBAction func saveActionBTN(_ sender: Any) {
         let templateObj = TemplateModel()
         let pc:PreviewViewController = PreviewViewController()
-        let imageSample = pc.addTextToImage(eventDetails: templateView(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
+        let imageWithDetails = pc.addTextToImage(eventDetails: templateView(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
+        let encodedImage = self.encodeToBase64String(fromImage: imageWithDetails)
         templateObj.eventType = eventTypeTF.text!
         templateObj.eventDateTime = dateTF.text!
         templateObj.eventVenue = venueTF.text!
         templateObj.eventWelcomeMessage = personalMessageTF.text!
-        templateObj.templateImage = imageSample
+        templateObj.templateImage = encodedImage
         templateObj.templateName = "temp"
         TemplateModelManager.shared.addTemplate(template: templateObj)
+        
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-//    _ adderss:String, _ personalMessage:String, _ date:String, _ phone:String, _ venue:String, _ eventType:String
 
     func addEventDetails(event:Template) -> [Template]{
         var eventData:[Template] = []
