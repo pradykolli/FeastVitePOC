@@ -9,14 +9,13 @@
 import Foundation
 import UIKit
 
+@objcMembers
 class TemplateModel : NSObject {
     
     var templateImage:String!
     var templateName:String!
-    var eventType:String!
-    var eventDateTime:String!
-    var eventVenue:String!
-    var eventWelcomeMessage:String!
+//    var event:EventModel!
+    var objectId:String?
     private static var _shared:TemplateModel!
     static var shared:TemplateModel{
         if _shared == nil {
@@ -28,9 +27,8 @@ class TemplateModel : NSObject {
     override init(){
         templateImage = ""
         templateName = "New Template"
-        eventType = "Birthday"
-        eventDateTime = "10/10/2019 18:30"
-        eventVenue = "1121 N. College Dr, Apt56, Maryville MO 64468"
-        eventWelcomeMessage = "It's my birthday, Please Join us for celebrating it together."
+//        let eventobj = EventModel.shared
+//        event = eventobj
+        
     }
 }

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@objcMembers
 class TemplateModelManager{
     let backendless = Backendless.sharedInstance()!
     var templatesDataStore:IDataStore!
@@ -25,9 +26,19 @@ class TemplateModelManager{
         let newTemplate = template
         templatesArray.append(newTemplate)
         saveTemplate(withTemplate: template)
+        print("app enetered added the template")
     }
     func saveTemplate(withTemplate:TemplateModel){
-        templatesDataStore.save(withTemplate)
+        templatesDataStore.save(withTemplate, response: {
+            (withTemplate) -> () in
+            print("withEvent saved")
+        },
+        error: {
+            (fault : Fault?) -> () in
+            print("Server reported an error: \(String(describing: fault))")
+        })
+        print("app saved added the template")
+
     }
     func retrieveAllTemplates(){
         Types.tryblock({

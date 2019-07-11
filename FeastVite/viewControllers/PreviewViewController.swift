@@ -29,7 +29,6 @@ extension UIImageView {
 }
 class PreviewViewController: UIViewController {
 
-    let templateObject = Template.shared
     @IBOutlet weak var previewImg: UIImageView!
     var label:UILabel!
     var imageDummy:UIImage = UIImage(named: "bg")!
@@ -49,7 +48,7 @@ class PreviewViewController: UIViewController {
     }
     
     
-    func addTextToImage(eventDetails: [Template], inImage: UIImage, atPoint:CGPoint) -> UIImage{
+    func addTextToImage(eventDetails: EventModel, inImage: UIImage, atPoint:CGPoint) -> UIImage{
         // Setup the font specific variables
         let textColor = UIColor.white
         let textFont = UIFont(name: "HelveticaNeue", size: 500)
@@ -70,7 +69,7 @@ class PreviewViewController: UIViewController {
         // Our drawing bounds
         let drawingBounds = CGRect(x:0.0, y:0.0, width:inImage.size.width, height:inImage.size.height)
 
-            let text1 = eventDetails[0].eventType as NSString
+            let text1 = eventDetails.eventType as NSString
         let textSize = text1.size(withAttributes: [NSAttributedString.Key.font:textFont!])
             let textRect = CGRect(x:drawingBounds.size.width/2 - textSize.width/2, y: imageRectExtOut.size.height,
                                   width:textSize.width, height:textSize.height)

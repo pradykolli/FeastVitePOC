@@ -20,8 +20,6 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
     @IBOutlet weak var phoneTF: UITextField!
     @IBOutlet weak var venueTF: UITextField!
     @IBOutlet weak var dateTF: UITextField!
-    static var templateObject = Template.shared
-    static var totalDetails:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         uploadImageBTN.layer.cornerRadius = 5
@@ -70,15 +68,23 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         dismiss(animated: true, completion: nil)
     }
 
-    func templateView() -> [Template]{
-        CreateTemplateImageViewController.templateObject.address = addressTF.text!
-        CreateTemplateImageViewController.templateObject.date = dateTF.text!
-        CreateTemplateImageViewController.templateObject.eventType = eventTypeTF.text!
-        CreateTemplateImageViewController.templateObject.personalMessage = personalMessageTF.text!
-        CreateTemplateImageViewController.templateObject.phone = phoneTF.text!
-        CreateTemplateImageViewController.templateObject.venue = venueTF.text!
-       let eventData = self.addEventDetails(event: CreateTemplateImageViewController.templateObject)
-        return eventData
+    /**
+     * Created by Pradeep Kolli
+     
+     * This method is used to fetch the details from the text fields in UI to create a event object.
+     
+     * @param  nil
+     
+     */
+    func fetchEventDetailsFromTF() -> EventModel{
+        let eventObj:EventModel = EventModel.shared
+        eventObj.eventType = eventTypeTF.text!
+        eventObj.address = addressTF.text!
+        eventObj.dateAndTime = dateTF.text!
+        eventObj.personalMessage = personalMessageTF.text!
+        eventObj.phone = phoneTF.text!
+        eventObj.venue = venueTF.text!
+        return eventObj
     }
     
     /**
@@ -113,63 +119,48 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
+     
      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "previewImage"){
             let previewController = segue.destination as! PreviewViewController
-            let imageSample = previewController.addTextToImage(eventDetails: templateView(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
+            let imageSample = previewController.addTextToImage(eventDetails: fetchEventDetailsFromTF(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
             previewController.imageText = imageSample
         }
     }
+    
+    /**
+     * Created by Pradeep Kolli
+     
+     * This method is used to save the template to the Data store of backendless
+     
+     * @param  defaukt sender of type Any
+     
+     */
     @IBAction func saveActionBTN(_ sender: Any) {
         let templateObj = TemplateModel()
+        let eventObj = EventModel()
         let pc:PreviewViewController = PreviewViewController()
-        let imageWithDetails = pc.addTextToImage(eventDetails: templateView(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
+        let imageWithDetails = pc.addTextToImage(eventDetails: fetchEventDetailsFromTF(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
         let encodedImage = self.encodeToBase64String(fromImage: imageWithDetails)
-        templateObj.eventType = eventTypeTF.text!
-        templateObj.eventDateTime = dateTF.text!
-        templateObj.eventVenue = venueTF.text!
-        templateObj.eventWelcomeMessage = personalMessageTF.text!
+        eventObj.eventType = eventTypeTF.text!
+        eventObj.dateAndTime = dateTF.text!
+        eventObj.venue = venueTF.text!
+        eventObj.personalMessage = personalMessageTF.text!
+        eventObj.address = addressTF.text!
+        eventObj.phone = phoneTF.text!
+        EventModelManager.shared.addEvent(event: eventObj)
+        print("Crossed add event method")
+//        templateObj.event = eventObj
         templateObj.templateImage = encodedImage
         templateObj.templateName = "temp"
         TemplateModelManager.shared.addTemplate(template: templateObj)
-        
-    }
+        print("Crossed add template method")
 
-    func addEventDetails(event:Template) -> [Template]{
-        var eventData:[Template] = []
-        eventData.append(event)
-        return eventData
     }
     
 }
 
-class Template{
-    private static var _shared:Template!
-    static var shared:Template{
-        if _shared == nil {
-            _shared = Template()
-        }
-        return _shared
-    }
-    var eventType: String
-    var personalMessage: String
-    var address: String
-    var phone: String
-    var venue: String
-    var date: String
-    private init(){
-        self.address = ""
-        self.date = ""
-        self.eventType = ""
-        self.personalMessage = ""
-        self.phone = ""
-        self.venue = ""
-    }
-}
+
 
 
