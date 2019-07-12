@@ -11,19 +11,18 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class ManageTemplatesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-//    var items:[UIImage:String] = [ UIImage(named: "bg")!:"Template1" , UIImage(named: "bg2")!:"Template2" ]
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         TemplateModelManager.shared.retrieveAllTemplates()
-        print(TemplateModelManager.shared.templatesArray.count)
+        print("total number of templates are: ",TemplateModelManager.shared.templatesArray.count)
     }
     
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using [segue destinationViewController].
+        
+    }
  
 
     // MARK: UICollectionViewDataSource
@@ -40,37 +39,38 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // Configure the cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TemplateCollectionViewCell
-//        cell.templatePreviewImage.image = Array(items.keys)[indexPath.item]
-//        cell.templateNameLBL.text = Array(items.values)[indexPath.item]
         let templateImageURL = TemplateModelManager.shared.templatesArray[indexPath.item].templateImage!
         let templateImage:UIImage = TemplateModelManager.shared.getImage(fromTemplateURL: templateImageURL)
         cell.templatePreviewImage.image = templateImage
         cell.templateNameLBL.text = TemplateModelManager.shared.templatesArray[indexPath.item].templateName
-        // Configure the cell
-    
         return cell
     }
+    
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let rowSize:CGFloat = UIScreen.main.bounds.width - 12
-        let heightOfTemplate:CGFloat = CGFloat(185)
+        let heightOfTemplate:CGFloat = UIScreen.main.bounds.height - 12
         let numberOfColumns = CGFloat(2)
-        return CGSize(width: (rowSize / numberOfColumns), height: heightOfTemplate)
+        let numberOfRows = CGFloat(3)
+        return CGSize(width: (rowSize / numberOfColumns), height: heightOfTemplate / numberOfRows)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        if(segue.identifier == "editTemplateSegue"){
-            
-        }
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.collectionView.performBatchUpdates({
+            self.collectionView.reloadSections(IndexSet(integer: 0))
+            collectionView.reloadData()
+        }, completion: nil)
+        TemplateModelManager.shared.retrieveAllTemplates()
     }
+    
     // MARK: UICollectionViewDelegate
 
     /*

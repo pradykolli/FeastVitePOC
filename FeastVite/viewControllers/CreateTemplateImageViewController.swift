@@ -29,7 +29,14 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         // Do any additional setup after loading the view.
     }
     
-
+    /**
+     * Created by Pradeep Kolli
+     
+     * This method is used to upload the image and gives us to choose between picking from gallery or taking a new picture from camera
+     
+     * @param  default sender of type Any
+     
+     */
     @IBAction func uploadImageBTN(_ sender: Any) {
         let alert = UIAlertController(title: "Racecap", message: "Please Select an Option", preferredStyle: .actionSheet)
         
@@ -57,7 +64,14 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         })
     }
     
-    
+    /**
+     * Created by Pradeep Kolli
+     
+     * This method is used to display the template image in the image viewer after finishing picking the image
+     
+     * @param
+     
+     */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage {
             imagePreviewIV.image = image
@@ -114,16 +128,19 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         let templateObj = TemplateModel()
         let eventObj = EventModel()
         
+        //getting the image with the event details printed on it from another controller.
         let pc:PreviewViewController = PreviewViewController()
         let imageWithDetails = pc.addTextToImage(eventDetails: fetchEventDetailsFromTF(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
         let templateURL:String = TemplateModelManager.shared.upload(image: imageWithDetails)
         eventObj.eventType = eventTypeTF.text!
+        
+        // creating an template object from the data retrieved from image picker and other fields and saving it to the templates table.
         templateObj.templateImage = templateURL
         templateObj.templateName = eventObj.eventType
         TemplateModelManager.shared.addTemplate(template: templateObj)
         print("Crossed add template method")
 
-        
+        // creating an event object from the data retrieved from text fields and saving it to the event.
         eventObj.eventType = eventTypeTF.text!
         eventObj.dateAndTime = dateTF.text!
         eventObj.venue = venueTF.text!
@@ -134,8 +151,7 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         EventModelManager.shared.addEvent(eventOf: eventObj)
 //        EventModelManager.shared.assign(event: eventObj, invitationTemplate: templateObj)
         print("Crossed add event method")
-
-
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }

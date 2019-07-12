@@ -48,6 +48,19 @@ class PreviewViewController: UIViewController {
     }
     
     
+    /**
+     
+     * Created by Pradeep kolli
+     
+     * This method allows to get the image with the event details printed on it.
+     
+     * @param  {eventDetails,inImage,atPoint} eventdetails  [This param sends the event object to the method]
+     *                                        inImage       [This param sends the selected image to the method]
+     *                                        atPoint       [This param sends in the starting point to draw text                                                      on an invitation into the method]
+     
+     * return This method returns an image with all event details printed on it of type UIImage.
+     
+     */
     func addTextToImage(eventDetails: EventModel, inImage: UIImage, atPoint:CGPoint) -> UIImage{
         // Setup the font specific variables
         let textColor = UIColor.white

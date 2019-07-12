@@ -1322,20 +1322,30 @@
                                     <rect key="frame" x="0.0" y="0.0" width="153" height="143"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQs-oY-dSE">
-                                            <rect key="frame" x="48" y="112" width="56" height="23"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQs-oY-dSE">
+                                            <rect key="frame" x="13" y="117" width="127" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="23" id="jHr-8D-TOd"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dNH-5z-6RR">
-                                            <rect key="frame" x="0.0" y="0.0" width="152" height="107"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dNH-5z-6RR">
+                                            <rect key="frame" x="0.0" y="0.0" width="153" height="107"/>
                                         </imageView>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="yQs-oY-dSE" firstAttribute="bottom" secondItem="bTX-U6-VAu" secondAttribute="bottomMargin" constant="5" id="73o-GS-Urb"/>
+                                    <constraint firstItem="yQs-oY-dSE" firstAttribute="top" secondItem="dNH-5z-6RR" secondAttribute="bottom" constant="10" id="Wak-9B-yd5"/>
+                                    <constraint firstItem="dNH-5z-6RR" firstAttribute="top" secondItem="bTX-U6-VAu" secondAttribute="top" id="ezb-pW-XkL"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="yQs-oY-dSE" secondAttribute="trailing" constant="5" id="j1M-HB-FIc"/>
+                                    <constraint firstItem="dNH-5z-6RR" firstAttribute="leading" secondItem="bTX-U6-VAu" secondAttribute="leading" id="lsX-oH-DRq"/>
+                                    <constraint firstItem="yQs-oY-dSE" firstAttribute="leading" secondItem="bTX-U6-VAu" secondAttribute="leadingMargin" constant="5" id="nGw-AE-hh5"/>
+                                    <constraint firstAttribute="trailing" secondItem="dNH-5z-6RR" secondAttribute="trailing" id="tBb-aS-gFz"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="templateNameLBL" destination="yQs-oY-dSE" id="7o9-Z1-JOL"/>
                                     <outlet property="templatePreviewImage" destination="dNH-5z-6RR" id="ifk-Ud-EjS"/>
@@ -1389,7 +1399,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="C9v-fV-Baz"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="LOGOUT">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>

@@ -40,17 +40,11 @@ class TemplateModelManager{
         return uploadedFile!.fileURL
     }
     func getImage(fromTemplateURL:String) -> UIImage{
-        
         let imageUrlString = fromTemplateURL
-        
         let imageUrl = URL(string: imageUrlString)!
-        
         let imageData = try! Data(contentsOf: imageUrl)
-        
         let image = UIImage(data: imageData)
-        
         return image!
-        
     }
     func addTemplate(template:TemplateModel){
         let newTemplate = template
