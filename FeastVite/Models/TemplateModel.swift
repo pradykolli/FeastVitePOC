@@ -14,7 +14,6 @@ class TemplateModel : NSObject {
     
     var templateImage:String!
     var templateName:String!
-//    var event:EventModel!
     var objectId:String?
     private static var _shared:TemplateModel!
     static var shared:TemplateModel{
@@ -27,8 +26,5 @@ class TemplateModel : NSObject {
     override init(){
         templateImage = ""
         templateName = "New Template"
-//        let eventobj = EventModel.shared
-//        event = eventobj
-        
     }
 }

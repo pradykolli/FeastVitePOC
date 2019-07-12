@@ -87,33 +87,6 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         return eventObj
     }
     
-    /**
-     * Created by Pradeep Kolli
-     
-     * This method is used to encode the final image we get after printing event details on it into a string of line length 64
-     
-     * @param  {UIImage} baseImage      [This param sends the baseImage to be encoded to the method]
-     
-     */
-    func encodeToBase64String(fromImage:UIImage) -> String{
-        //Now use image to create into NSData format
-        let imageData:Data = fromImage.pngData()!
-        let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
-        return strBase64
-    }
-    /**
-     * Created by Pradeep Kolli
-     
-     * This method is used to decode the base64 encoded String into a UIImage
-     
-     * @param  {String} fromString      [This param sends the base64 encoded String to be deocded to the method]
-     
-     */
-    func decodeToImage(fromString:String) -> UIImage{
-        let dataDecoded:Data = Data(base64Encoded: fromString, options: .ignoreUnknownCharacters)!
-        let decodedimage:UIImage = UIImage(data: dataDecoded)!
-        return decodedimage
-    }
     
     /*
      // MARK: - Navigation
@@ -140,22 +113,28 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
     @IBAction func saveActionBTN(_ sender: Any) {
         let templateObj = TemplateModel()
         let eventObj = EventModel()
+        
         let pc:PreviewViewController = PreviewViewController()
         let imageWithDetails = pc.addTextToImage(eventDetails: fetchEventDetailsFromTF(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
-        let encodedImage = self.encodeToBase64String(fromImage: imageWithDetails)
+        let templateURL:String = TemplateModelManager.shared.upload(image: imageWithDetails)
+        
+        templateObj.templateImage = templateURL
+        templateObj.templateName = eventObj.eventType
+        TemplateModelManager.shared.addTemplate(template: templateObj)
+        print("Crossed add template method")
+
+        
         eventObj.eventType = eventTypeTF.text!
         eventObj.dateAndTime = dateTF.text!
         eventObj.venue = venueTF.text!
         eventObj.personalMessage = personalMessageTF.text!
         eventObj.address = addressTF.text!
         eventObj.phone = phoneTF.text!
-        EventModelManager.shared.addEvent(event: eventObj)
+        eventObj.eventInviteTemplate = templateObj
+        EventModelManager.shared.addEvent(eventOf: eventObj)
+//        EventModelManager.shared.assign(event: eventObj, invitationTemplate: templateObj)
         print("Crossed add event method")
-//        templateObj.event = eventObj
-        templateObj.templateImage = encodedImage
-        templateObj.templateName = "temp"
-        TemplateModelManager.shared.addTemplate(template: templateObj)
-        print("Crossed add template method")
+
 
     }
     

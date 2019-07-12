@@ -22,6 +22,23 @@ class TemplateModelManager{
     subscript(index:Int) -> TemplateModel {
         return templatesArray[index]
     }
+    
+    func upload(image:UIImage) -> String {
+        let textFileName = Float.random(in: 0 ... 100000000)
+        let filePath:String = "FilesImages/" + "\(textFileName).jpeg"
+        print("\n============ Uploading files with the SYNC API ============")
+        var uploadedFile:BackendlessFile!
+        Types.tryblock({ () -> Void in
+            let imageData:Data = image.jpegData(compressionQuality: 0.2)!
+            uploadedFile = self.backendless.file.uploadFile(filePath,
+                                                            content: imageData, overwriteIfExist:true)
+            print("File has been uploaded. File URL is - \(uploadedFile!.fileURL ?? "abc")")
+        },
+                       catchblock: { (exception) -> Void in
+                        print("Server reported an error: \(exception as! Fault)")
+        })
+        return uploadedFile!.fileURL
+    }
     func addTemplate(template:TemplateModel){
         let newTemplate = template
         templatesArray.append(newTemplate)
@@ -31,7 +48,7 @@ class TemplateModelManager{
     func saveTemplate(withTemplate:TemplateModel){
         templatesDataStore.save(withTemplate, response: {
             (withTemplate) -> () in
-            print("withEvent saved")
+            print("withTemplate saved")
         },
         error: {
             (fault : Fault?) -> () in

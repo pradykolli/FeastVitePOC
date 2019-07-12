@@ -22,9 +22,9 @@ class EventModelManager{
     subscript(index:Int) -> EventModel {
         return eventsArray[index]
     }
-    func addEvent(event:EventModel){
-        eventsArray.append(event)
-        saveEvent(withEvent: event)
+    func addEvent(eventOf:EventModel){
+        eventsArray.append(eventOf)
+        saveEvent(withEvent: eventOf)
         print("app enetered added the event")
 
     }
@@ -39,6 +39,11 @@ class EventModelManager{
         })
         print("app enetered saved the event")
 
+    }
+    func assign(event:EventModel, invitationTemplate:TemplateModel){
+        let templateObj = TemplateModelManager.shared.templatesDataStore.save(invitationTemplate) as! TemplateModel
+        self.eventDataStore.addRelation("event:template:1", parentObjectId: event.objectId, childObjects: [templateObj.objectId!])
+        self.addEvent(eventOf: event)
     }
     func retrieveAllTemplates(){
         Types.tryblock({

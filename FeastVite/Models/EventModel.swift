@@ -24,6 +24,7 @@ class EventModel:NSObject{
     var phone: String
     var venue: String
     var dateAndTime: String
+    var eventInviteTemplate: TemplateModel
     override init(){
         self.address = ""
         self.dateAndTime = ""
@@ -31,5 +32,7 @@ class EventModel:NSObject{
         self.personalMessage = ""
         self.phone = ""
         self.venue = ""
+        let templateObj = TemplateModel.shared
+        self.eventInviteTemplate = templateObj
     }
 }
