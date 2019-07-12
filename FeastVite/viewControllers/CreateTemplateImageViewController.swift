@@ -117,7 +117,7 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         let pc:PreviewViewController = PreviewViewController()
         let imageWithDetails = pc.addTextToImage(eventDetails: fetchEventDetailsFromTF(), inImage: imagePreviewIV.image!, atPoint: CGPoint(x: 50, y: 50))
         let templateURL:String = TemplateModelManager.shared.upload(image: imageWithDetails)
-        
+        eventObj.eventType = eventTypeTF.text!
         templateObj.templateImage = templateURL
         templateObj.templateName = eventObj.eventType
         TemplateModelManager.shared.addTemplate(template: templateObj)

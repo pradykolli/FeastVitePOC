@@ -11,12 +11,14 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class ManageTemplatesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    var items:[UIImage:String] = [ UIImage(named: "bg")!:"Template1" , UIImage(named: "bg2")!:"Template2" ]
+//    var items:[UIImage:String] = [ UIImage(named: "bg")!:"Template1" , UIImage(named: "bg2")!:"Template2" ]
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(items.count)
+        TemplateModelManager.shared.retrieveAllTemplates()
+        print(TemplateModelManager.shared.templatesArray.count)
     }
-
     
     // MARK: - Navigation
 
@@ -34,13 +36,17 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return items.count
+        return TemplateModelManager.shared.templatesArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TemplateCollectionViewCell
-        cell.templatePreviewImage.image = Array(items.keys)[indexPath.item]
-        cell.templateNameLBL.text = Array(items.values)[indexPath.item]
+//        cell.templatePreviewImage.image = Array(items.keys)[indexPath.item]
+//        cell.templateNameLBL.text = Array(items.values)[indexPath.item]
+        let templateImageURL = TemplateModelManager.shared.templatesArray[indexPath.item].templateImage!
+        let templateImage:UIImage = TemplateModelManager.shared.getImage(fromTemplateURL: templateImageURL)
+        cell.templatePreviewImage.image = templateImage
+        cell.templateNameLBL.text = TemplateModelManager.shared.templatesArray[indexPath.item].templateName
         // Configure the cell
     
         return cell
