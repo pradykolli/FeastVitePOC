@@ -12,6 +12,8 @@ import UIKit
 @objcMembers
 class TemplateModel : NSObject {
     
+    var backendless = Backendless.sharedInstance()
+    var templateDataStore:IDataStore!
     var templateImage:String!
     var templateName:String!
     var objectId:String?
@@ -22,8 +24,10 @@ class TemplateModel : NSObject {
         }
         return _shared
     }
-    
-    override init(){
+    private override init(){
+        templateDataStore = backendless!.data.of(TemplateModel.self)
+    }
+    init(){
         templateImage = ""
         templateName = "New Template"
     }
