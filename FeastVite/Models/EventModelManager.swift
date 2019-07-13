@@ -41,9 +41,10 @@ class EventModelManager{
 
     }
     func assign(event:EventModel, invitationTemplate:TemplateModel){
-        let templateObj = TemplateModelManager.shared.templatesDataStore.save(invitationTemplate) as! TemplateModel
-        self.eventDataStore.addRelation("event:template:1", parentObjectId: event.objectId, childObjects: [templateObj.objectId!])
-        self.addEvent(eventOf: event)
+//        let templateObj = TemplateModelManager.shared.templatesDataStore.save(invitationTemplate) as! TemplateModel
+//        self.addEvent(eventOf: event)
+        self.eventDataStore.addRelation("eventInviteTemplate:TemplateModel:n", parentObjectId: event.objectId, whereClause: invitationTemplate.objectId)
+        
     }
     func retrieveAllTemplates(){
         Types.tryblock({

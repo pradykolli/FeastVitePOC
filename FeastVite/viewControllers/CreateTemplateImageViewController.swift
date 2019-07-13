@@ -137,7 +137,7 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         // creating an template object from the data retrieved from image picker and other fields and saving it to the templates table.
         templateObj.templateImage = templateURL
         templateObj.templateName = eventObj.eventType
-        TemplateModelManager.shared.addTemplate(template: templateObj)
+//        TemplateModelManager.shared.addTemplate(template: templateObj)
         print("Crossed add template method")
 
         // creating an event object from the data retrieved from text fields and saving it to the event.
@@ -148,8 +148,8 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         eventObj.address = addressTF.text!
         eventObj.phone = phoneTF.text!
         eventObj.eventInviteTemplate = templateObj
-        EventModelManager.shared.addEvent(eventOf: eventObj)
-//        EventModelManager.shared.assign(event: eventObj, invitationTemplate: templateObj)
+//        EventModelManager.shared.addEvent(eventOf: eventObj)
+        EventModelManager.shared.assign(event: eventObj, invitationTemplate: templateObj)
         print("Crossed add event method")
         self.navigationController?.popToRootViewController(animated: true)
     }
