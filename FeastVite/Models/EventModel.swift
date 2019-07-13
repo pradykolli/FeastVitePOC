@@ -9,8 +9,10 @@
 import Foundation
 @objcMembers
 class EventModel:NSObject{
+    
     private static var _shared:EventModel!
-    let backendless = Backendless.sharedInstance()!
+    var backendless = Backendless.sharedInstance()
+    var eventDataStore:IDataStore!
     var objectId:String?
     static var shared:EventModel{
         if _shared == nil {
@@ -25,14 +27,19 @@ class EventModel:NSObject{
     var venue: String
     var dateAndTime: String
     var eventInviteTemplate: TemplateModel
-    override init(){
+    
+    private override init(){
+        eventDataStore = backendless!.data.of(EventModel.self)
+    }
+    
+    init(_ template: TemplateModel){
         self.address = ""
         self.dateAndTime = ""
         self.eventType = ""
         self.personalMessage = ""
         self.phone = ""
         self.venue = ""
-        let templateObj = TemplateModel.shared
-        self.eventInviteTemplate = templateObj
+//         let templateObj = TemplateModel.shared
+        self.eventInviteTemplate = template
     }
 }
