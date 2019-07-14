@@ -28,18 +28,15 @@ class EventModel:NSObject{
     var dateAndTime: String
     var eventInviteTemplate: TemplateModel
     
-    private override init(){
-        eventDataStore = backendless!.data.of(EventModel.self)
-    }
     
-    init(_ template: TemplateModel){
+    override init(){
         self.address = ""
         self.dateAndTime = ""
         self.eventType = ""
         self.personalMessage = ""
         self.phone = ""
         self.venue = ""
-//         let templateObj = TemplateModel.shared
-        self.eventInviteTemplate = template
+        let templateObj = TemplateModel.shared
+        self.eventInviteTemplate = templateObj
     }
 }

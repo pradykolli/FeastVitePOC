@@ -148,8 +148,8 @@ class CreateTemplateImageViewController: UIViewController, UIImagePickerControll
         eventObj.address = addressTF.text!
         eventObj.phone = phoneTF.text!
         eventObj.eventInviteTemplate = templateObj
-//        EventModelManager.shared.addEvent(eventOf: eventObj)
-        EventModelManager.shared.assign(event: eventObj, invitationTemplate: templateObj)
+        let savedEventObj = EventModelManager.shared.addEvent(eventOf: eventObj)
+        EventModelManager.shared.assign(event:savedEventObj, invitationTemplate: templateObj)
         print("Crossed add event method")
         self.navigationController?.popToRootViewController(animated: true)
     }

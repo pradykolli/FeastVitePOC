@@ -24,10 +24,8 @@ class TemplateModel : NSObject {
         }
         return _shared
     }
-    private override init(){
-        templateDataStore = backendless!.data.of(TemplateModel.self)
-    }
-    init(){
+    
+    override init(){
         templateImage = ""
         templateName = "New Template"
     }
