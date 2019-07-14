@@ -21,10 +21,10 @@ class AccountsViewController: UIViewController {
     
     @IBAction func importContactsBtn(_ sender: Any) {
         let store = CNContactStore()
-        let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey,CNContactNicknameKey]
+        let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey,CNContactNicknameKey, CNContactEmailAddressesKey]
         do{
             try store.enumerateContacts(with: CNContactFetchRequest.init(keysToFetch: keysToFetch as [CNKeyDescriptor]), usingBlock: { (contact, pointer) -> Void in
-                print("contact = ","\(contact)")
+                print("contact = ","\(contact.emailAddresses[0].value)")
                 
             })
         }
