@@ -27,6 +27,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var logoIV: UIImageView!
     static let shared = LoginViewController()
 
+    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var stayLoggedInSwitch: UISwitch!
     @IBOutlet weak var passwordTF: UITextField!
@@ -46,11 +47,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         signUpBTN.layer.cornerRadius = 15
         loginBTN.layer.cornerRadius = 15
         backgroundView.layer.cornerRadius = 15
+        progressView.layer.cornerRadius = 5
+        
+        progressView.clipsToBounds = true
+        progressView.layer.sublayers![1].cornerRadius = 5
+        progressView.subviews[1].clipsToBounds = true
         backendless = Backendless.sharedInstance()
         passwordTF.delegate = self
         emailTF.delegate = self
         passwordTF.returnKeyType = UIReturnKeyType.done
         self.hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     //MARK: - Controlling the Keyboard's return key - Pradeep Kolli
@@ -64,6 +72,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
+    @objc func keyboardDidShow(notification: NSNotification) {
+        let infoValue = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
+        let keyboardSize = infoValue.cgRectValue.size
+        UIView.animate(withDuration: 0.3, animations: {
+            var viewFrame = self.view.frame
+            viewFrame.size.height -= keyboardSize.height
+            self.view.frame = viewFrame
+        })
+    }
+    
+    @objc func keyboardWillBeHidden(notification: NSNotification) {
+        UIView.animate(withDuration: 0.3, animations: {
+            let screenFrame = UIScreen.main.bounds
+            var viewFrame = CGRect(x: 0, y: 0, width: screenFrame.size.width, height: screenFrame.size.height)
+            viewFrame.origin.y = 0
+            self.view.frame = viewFrame
+        })
+    }
+    
     /**
      
      * Created by Sambi Chanimella
