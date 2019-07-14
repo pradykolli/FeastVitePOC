@@ -14,10 +14,12 @@ class TemplateModelManager{
     let backendless = Backendless.sharedInstance()!
     var templatesDataStore:IDataStore!
     var templatesArray:[TemplateModel] =  []
+    let currentUser:BackendlessUser!
     static var shared:TemplateModelManager = TemplateModelManager()
     
     private init(){
         templatesDataStore = backendless.data.of(TemplateModel.self)
+        currentUser = backendless.userService.currentUser
     }
     subscript(index:Int) -> TemplateModel {
         return templatesArray[index]
@@ -66,8 +68,10 @@ class TemplateModelManager{
     }
     func retrieveAllTemplates(){
         Types.tryblock({
+            let whereClause = "ownerId = '" + (self.currentUser.objectId! as String) + "'"
             let queryBuilder:DataQueryBuilder = DataQueryBuilder()
             queryBuilder.setPageSize(100)
+            queryBuilder.setWhereClause(whereClause)
             let result = self.templatesDataStore.find(queryBuilder) as! [TemplateModel]
             self.templatesArray = result
         },

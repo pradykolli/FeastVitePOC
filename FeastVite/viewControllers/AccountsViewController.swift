@@ -35,6 +35,10 @@ class AccountsViewController: UIViewController {
     }
     @IBAction func logOutBTN(_ sender: Any) {
         backendless.userService.logout({
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let homeNavController = storyboard.instantiateViewController(withIdentifier: "homeNavController") as! UINavigationController
+            self.present(homeNavController, animated: true, completion: nil)
+            
         }) { (fault:Fault?) in
             self.alerts.displayAlert("Server Error", (fault?.message)!)
         }

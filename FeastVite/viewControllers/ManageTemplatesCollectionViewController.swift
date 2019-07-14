@@ -11,10 +11,13 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class ManageTemplatesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    let backendless = Backendless.sharedInstance()!
     override func viewDidLoad() {
         super.viewDidLoad()
         TemplateModelManager.shared.retrieveAllTemplates()
         print("total number of templates are: ",TemplateModelManager.shared.templatesArray.count)
+        let currentUser : BackendlessUser = backendless.userService.currentUser
+        print("Current user",currentUser.objectId!)
     }
     
     // MARK: - Navigation
