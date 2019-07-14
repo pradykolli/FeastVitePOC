@@ -7,19 +7,32 @@
 //
 
 import UIKit
-
+import Contacts
 class AccountsViewController: UIViewController {
     var backendless:Backendless!
     var alerts:AlertErrors = AlertErrors()
-
+    var contcatsDataStore:IDataStore!
     override func viewDidLoad() {
         super.viewDidLoad()
         print("in accounts")
         backendless = Backendless.sharedInstance()!
-
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func importContactsBtn(_ sender: Any) {
+        let store = CNContactStore()
+        let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey,CNContactNicknameKey]
+        do{
+            try store.enumerateContacts(with: CNContactFetchRequest.init(keysToFetch: keysToFetch as [CNKeyDescriptor]), usingBlock: { (contact, pointer) -> Void in
+                print("contact = ","\(contact)")
+                
+            })
+        }
+        catch{
+            print("something wrong happened")
+        }
+
+    }
     @IBAction func logOutBTN(_ sender: Any) {
         backendless.userService.logout({
         }) { (fault:Fault?) in
