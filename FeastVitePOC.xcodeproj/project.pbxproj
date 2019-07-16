@@ -33,6 +33,11 @@
 		E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */; };
 		E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */; };
 		E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */; };
+		E8F903BB22DD412A00047D21 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */; };
+		E8F903BD22DD416C00047D21 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BC22DD416C00047D21 /* ContactModel.swift */; };
+		E8F903BF22DD4C3D00047D21 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */; };
+		E8F903C122DE33F600047D21 /* ContactModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C022DE33F600047D21 /* ContactModelManager.swift */; };
+		E8F903C322DE64F100047D21 /* InvitationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C222DE64F100047D21 /* InvitationModel.swift */; };
 		F065B3595D0FC9F30C4F43E7 /* Pods_FeastVitePOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B7E1FC757198C6B6FB1346 /* Pods_FeastVitePOC.framework */; };
 		FDD8A6EFC5FC6E65A40687C3 /* Pods_FeastVitePOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C913D8181FCA1B10C9D56 /* Pods_FeastVitePOCTests.framework */; };
 /* End PBXBuildFile section */
@@ -104,6 +109,11 @@
 		E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTemplatesCollectionViewController.swift; sourceTree = "<group>"; };
 		E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTemplateImageViewController.swift; sourceTree = "<group>"; };
+		E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		E8F903BC22DD416C00047D21 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
+		E8F903C022DE33F600047D21 /* ContactModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelManager.swift; sourceTree = "<group>"; };
+		E8F903C222DE64F100047D21 /* InvitationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationModel.swift; sourceTree = "<group>"; };
 		FCD3BF5F7F1DFEAF82A99C26 /* Pods-FeastVitePOCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCUITests/Pods-FeastVitePOCUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +153,9 @@
 				E82EF4FF22D59E290095264A /* TemplateModelManager.swift */,
 				E89D955B22D73C39009AA662 /* EventModel.swift */,
 				E89D955D22D748DC009AA662 /* EventModelManager.swift */,
+				E8F903BC22DD416C00047D21 /* ContactModel.swift */,
+				E8F903C022DE33F600047D21 /* ContactModelManager.swift */,
+				E8F903C222DE64F100047D21 /* InvitationModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +280,8 @@
 				3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */,
 				E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */,
 				E82EF4FB22D595E30095264A /* AccountsViewController.swift */,
+				E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */,
+				E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -494,14 +509,18 @@
 			files = (
 				3FCADC3522C1C4A000705A32 /* MailSenderViewController.swift in Sources */,
 				3FF02C2622B37D81008A787A /* LoginViewController.swift in Sources */,
+				E8F903C322DE64F100047D21 /* InvitationModel.swift in Sources */,
 				E83B11CF22D06E8100B8175D /* TemplateCellCollectionViewCell.swift in Sources */,
 				E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */,
+				E8F903BF22DD4C3D00047D21 /* AddNewContactViewController.swift in Sources */,
 				3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */,
 				3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */,
 				E82EF4FC22D595E30095264A /* AccountsViewController.swift in Sources */,
 				3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */,
 				E8B19B3122D55FA600FB6D5A /* PreviewViewController.swift in Sources */,
 				3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */,
+				E8F903BD22DD416C00047D21 /* ContactModel.swift in Sources */,
+				E8F903C122DE33F600047D21 /* ContactModelManager.swift in Sources */,
 				3F63B2D122BD438E0058302B /* Errors.swift in Sources */,
 				3F8C98A122B18CA3009E1371 /* ViewController.swift in Sources */,
 				E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */,
@@ -512,6 +531,7 @@
 				E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */,
 				3F8C989F22B18CA3009E1371 /* AppDelegate.swift in Sources */,
 				3FBFFC1B22C45B59007C1182 /* Authentication.swift in Sources */,
+				E8F903BB22DD412A00047D21 /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
