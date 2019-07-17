@@ -50,7 +50,7 @@ class EventModelManager{
         let templateObj = self.templatesDataStore.save(invitationTemplate) as! TemplateModel
         self.eventDataStore.addRelation("eventInviteTemplate:TemplateModel:n", parentObjectId: event.objectId, childObjects: [templateObj.objectId!])
     }
-    func retrieveAllTemplates(){
+    func retrieveAllEvents(){
         Types.tryblock({
             let queryBuilder:DataQueryBuilder = DataQueryBuilder()
             queryBuilder.setPageSize(100)

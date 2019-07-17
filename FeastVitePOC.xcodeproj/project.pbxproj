@@ -39,6 +39,7 @@
 		E8F903C122DE33F600047D21 /* ContactModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C022DE33F600047D21 /* ContactModelManager.swift */; };
 		E8F903C322DE64F100047D21 /* InvitationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C222DE64F100047D21 /* InvitationModel.swift */; };
 		E8F903C522DEF93300047D21 /* InvitationModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C422DEF93300047D21 /* InvitationModelManager.swift */; };
+		E8F903C722DF07BC00047D21 /* SendInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */; };
 		F065B3595D0FC9F30C4F43E7 /* Pods_FeastVitePOC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B7E1FC757198C6B6FB1346 /* Pods_FeastVitePOC.framework */; };
 		FDD8A6EFC5FC6E65A40687C3 /* Pods_FeastVitePOCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 665C913D8181FCA1B10C9D56 /* Pods_FeastVitePOCTests.framework */; };
 /* End PBXBuildFile section */
@@ -116,6 +117,7 @@
 		E8F903C022DE33F600047D21 /* ContactModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelManager.swift; sourceTree = "<group>"; };
 		E8F903C222DE64F100047D21 /* InvitationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationModel.swift; sourceTree = "<group>"; };
 		E8F903C422DEF93300047D21 /* InvitationModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationModelManager.swift; sourceTree = "<group>"; };
+		E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendInvitationViewController.swift; sourceTree = "<group>"; };
 		FCD3BF5F7F1DFEAF82A99C26 /* Pods-FeastVitePOCUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeastVitePOCUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeastVitePOCUITests/Pods-FeastVitePOCUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,6 +287,7 @@
 				E82EF4FB22D595E30095264A /* AccountsViewController.swift */,
 				E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */,
 				E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */,
+				E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */,
 				E82EF4FC22D595E30095264A /* AccountsViewController.swift in Sources */,
 				3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */,
+				E8F903C722DF07BC00047D21 /* SendInvitationViewController.swift in Sources */,
 				E8B19B3122D55FA600FB6D5A /* PreviewViewController.swift in Sources */,
 				3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */,
 				E8F903BD22DD416C00047D21 /* ContactModel.swift in Sources */,

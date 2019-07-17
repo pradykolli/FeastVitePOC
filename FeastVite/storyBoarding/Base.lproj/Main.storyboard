@@ -1137,6 +1137,51 @@
             </objects>
             <point key="canvasLocation" x="1948" y="-270"/>
         </scene>
+        <!--Send Invitation View Controller-->
+        <scene sceneID="71j-7d-jDi">
+            <objects>
+                <viewController id="SLx-JV-mdB" customClass="SendInvitationViewController" customModule="FeastVitePOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZKv-ZH-Aq7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wr9-Yy-5G7">
+                                <rect key="frame" x="16" y="103" width="127" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcQ-bx-E4n">
+                                <rect key="frame" x="16" y="132" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwg-Kp-5wp">
+                                <rect key="frame" x="16" y="205" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1922100407" green="0.6621807649" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendInvitationBTN:" destination="SLx-JV-mdB" eventType="touchUpInside" id="zfG-gc-9pl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PCQ-4D-t7C"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailTF" destination="bcQ-bx-E4n" id="pJQ-ZW-M2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdM-VS-i6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7361" y="-1324"/>
+        </scene>
         <!--Create Template Image View Controller-->
         <scene sceneID="rv3-up-axR">
             <objects>
@@ -1360,6 +1405,7 @@
                                 <connections>
                                     <outlet property="templateNameLBL" destination="yQs-oY-dSE" id="7o9-Z1-JOL"/>
                                     <outlet property="templatePreviewImage" destination="dNH-5z-6RR" id="ifk-Ud-EjS"/>
+                                    <segue destination="SLx-JV-mdB" kind="show" id="SaH-d8-clx"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -1383,14 +1429,26 @@
         <!--View Invitations-->
         <scene sceneID="hTd-rK-iAX">
             <objects>
-                <viewController id="1o6-F8-tQc" sceneMemberID="viewController">
+                <viewController id="1o6-F8-tQc" customClass="ViewController" customModule="FeastVitePOC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P9Z-hW-fTe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="invite" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7G-Uh-Ipc">
+                                <rect key="frame" x="123" y="204" width="41" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="edG-5s-Eww"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="View Invitations" image="ViewInvitations" id="9H7-CA-iIa"/>
+                    <connections>
+                        <outlet property="eventLBL" destination="r7G-Uh-Ipc" id="M64-r6-tzy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhv-uJ-Z55" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

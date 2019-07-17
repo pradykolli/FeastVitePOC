@@ -31,8 +31,9 @@ class InvitationModelManager{
         return result
     }
     func send(invitation:InvitationModel, To contact:ContactModel){
-        let invitationObj = self.invitationsDataStore.save(InvitationModel.self) as! InvitationModel
+        let invitationObj = self.invitationsDataStore.save(invitation) as! InvitationModel
         self.invitationsDataStore.addRelation("invitationsList:ContactModel:n", parentObjectId: contact.objectId, childObjects: [invitationObj.objectId!])
+        ContactModel.shared.invitationsList.append(invitationObj)
     }
     func deleteContact(_ contact:InvitationModel){
         invitationsDataStore.remove(byId: contact.objectId)

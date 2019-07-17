@@ -12,9 +12,11 @@ private let reuseIdentifier = "Cell"
 
 class ManageTemplatesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let backendless = Backendless.sharedInstance()!
+    var eventObject:EventModel!
     override func viewDidLoad() {
         super.viewDidLoad()
         TemplateModelManager.shared.retrieveAllTemplates()
+        EventModelManager.shared.retrieveAllEvents()
         print("total number of templates are: ",TemplateModelManager.shared.templatesArray.count)
         let currentUser : BackendlessUser = backendless.userService.currentUser
         print("Current user",currentUser.objectId!)
@@ -24,7 +26,9 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using [segue destinationViewController].
-        
+        if let sendInvitation = segue.destination as? SendInvitationViewController {
+            sendInvitation.eventObj = self.eventObject
+        }
     }
  
 
@@ -44,6 +48,7 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // Configure the cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TemplateCollectionViewCell
+        eventObject = EventModelManager.shared.eventsArray[indexPath.item]
         let templateImageURL = TemplateModelManager.shared.templatesArray[indexPath.item].templateImage!
         let templateImage:UIImage = TemplateModelManager.shared.getImage(fromTemplateURL: templateImageURL)
         cell.templatePreviewImage.image = templateImage
