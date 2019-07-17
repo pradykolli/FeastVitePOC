@@ -1440,7 +1440,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="importContactsBtn:" destination="6Cx-c9-mWm" eventType="touchUpInside" id="0pp-kT-yKw"/>
                                     <segue destination="fSV-xJ-RJD" kind="show" id="2Tc-zX-Rk3"/>
                                 </connections>
                             </button>

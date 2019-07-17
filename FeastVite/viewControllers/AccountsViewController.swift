@@ -11,11 +11,13 @@ import Contacts
 class AccountsViewController: UIViewController {
     var backendless:Backendless!
     var alerts:AlertErrors = AlertErrors()
-    var contcatsDataStore:IDataStore!
+    var contactsDataStore:IDataStore!
+    var importedContacts:[CNContact] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         print("in accounts")
         backendless = Backendless.sharedInstance()!
+        contactsDataStore = backendless.data.of(ContactModel.self)
         // Do any additional setup after loading the view.
     }
     
@@ -24,9 +26,20 @@ class AccountsViewController: UIViewController {
         let keysToFetch = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey,CNContactNicknameKey, CNContactEmailAddressesKey]
         do{
             try store.enumerateContacts(with: CNContactFetchRequest.init(keysToFetch: keysToFetch as [CNKeyDescriptor]), usingBlock: { (contact, pointer) -> Void in
-                print("contact = ","\(contact.emailAddresses[0].value)")
+//                print("contact = ","\(contact.emailAddresses)")
+                self.importedContacts.append(contact)
                 
             })
+            print("imported contacts count", importedContacts.count)
+            for index in 0..<importedContacts.count - 1{
+                let contactObj:ContactModel = ContactModel()
+                contactObj.name = importedContacts[index].givenName + " " + importedContacts[index].familyName
+                contactObj.emailAddress = importedContacts[index].emailAddresses[0].value as String
+                contactObj.phone = importedContacts[index].phoneNumbers[0].value.stringValue
+                contactsDataStore.save(contactObj)
+                ContactModelManager.shared.contactsArray.append(contactObj)
+//                print("\n",contactObj.emailAddress)
+            }
         }
         catch{
             print("something wrong happened")

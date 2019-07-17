@@ -33,7 +33,7 @@ class ContactModelManager{
     }
     func assign(contact:ContactModel, To contactGroup:ContactGroupModel){
         let contactObj = self.contactDataStore.save(contact) as! ContactModel
-        self.contactDataStore.addRelation("contactList:ContactGroupModel:n", parentObjectId: contact.objectId, childObjects: [contactObj.objectId!])
+        self.contactDataStore.addRelation("contactList:ContactGroupModel:n", parentObjectId: contactGroup.objectId, childObjects: [contactObj.objectId!])
     }
     func deleteContact(_ contact:ContactModel){
         contactDataStore.remove(byId: contact.objectId)
