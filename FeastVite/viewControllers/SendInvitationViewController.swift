@@ -57,18 +57,23 @@ class SendInvitationViewController: UIViewController {
         return fetchedContactObj
     }
     @IBAction func sendInvitationBTN(_ sender: Any) {
+//        let invitationObj:InvitationModel = InvitationModel()
+//        let currentUser = backendless.userService.currentUser
+//        let emailAddress = emailTF.text!
+//        let guest = fetchingUserId(of:emailAddress)
+//        let contactOfGuest:[ContactModel] = self.getContactObj(of: emailAddress)
+//        if let guestId = guest.objectId{
+//            invitationObj.inviteeID = guestId as String
+//            invitationObj.hostID = currentUser?.objectId! as String?
+//            invitationObj.eventID = eventObj.objectId! as NSString as String
+//            InvitationModelManager.shared.send(invitation: invitationObj, To: contactOfGuest[0])
+//
+//        }
         let invitationObj:InvitationModel = InvitationModel()
-        let currentUser = backendless.userService.currentUser
         let emailAddress = emailTF.text!
         let guest = fetchingUserId(of:emailAddress)
         let contactOfGuest:[ContactModel] = self.getContactObj(of: emailAddress)
-        if let guestId = guest.objectId{
-            invitationObj.inviteeID = guestId as String
-            invitationObj.hostID = currentUser?.objectId! as String?
-            invitationObj.eventID = eventObj.objectId! as String?
-            InvitationModelManager.shared.send(invitation: invitationObj, To: contactOfGuest[0])
-            
-        }
+        InvitationModelManager.shared.assign(invitation: invitationObj, To: eventObj, andTo: contactOfGuest[0])
         
     }
     

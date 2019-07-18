@@ -15,7 +15,7 @@ class ContactModel : NSObject {
     var emailAddress:String!
     var name:String!
     var phone:String!
-    var invitationsList:[InvitationModel] = []
+    var invitationsContacts:[InvitationModel] = []
     var objectId:String?
     private static var _shared:ContactModel!
     static var shared:ContactModel{

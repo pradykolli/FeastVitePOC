@@ -30,15 +30,34 @@ class InvitationModelManager{
         let result:InvitationModel = invitationsDataStore.save(invitation) as! InvitationModel
         return result
     }
-    func send(invitation:InvitationModel, To contact:ContactModel){
+//    func send(invitation:InvitationModel, To contact:ContactModel){
+//        let invitationObj = self.invitationsDataStore.save(invitation) as! InvitationModel
+//        self.invitationsDataStore.addRelation("invitationsList:ContactModel:n", parentObjectId: contact.objectId!, childObjects: [invitationObj.objectId!], response: { (NSNumber) in
+//                print(NSNumber)
+//            }, error: { (fault:Fault?) in
+//                print("Error occured", (fault?.message!)!)
+//            }
+//        )
+//        ContactModel.shared.invitationsList.append(invitationObj)
+//    }
+    func assign(invitation:InvitationModel, To event:EventModel, andTo contact:ContactModel){
         let invitationObj = self.invitationsDataStore.save(invitation) as! InvitationModel
-        self.invitationsDataStore.addRelation("invitationsList:ContactModel:n", parentObjectId: contact.objectId, childObjects: [invitationObj.objectId!])
-        ContactModel.shared.invitationsList.append(invitationObj)
+        self.invitationsDataStore.addRelation("invitationsList:EventModel:n", parentObjectId: invitationObj.objectId!, childObjects: [event.objectId!], response: {(NSNumber) in
+            print(NSNumber!)
+        }, error: { (fault:Fault?) in
+            print("Error occured in events", (fault?.message!)!)
+        })
+        self.invitationsDataStore.addRelation("invitationsContacts:ContactModel:n", parentObjectId: invitationObj.objectId!, childObjects: [contact.objectId!], response: { (NSNumber) in
+            print(NSNumber!)
+            }, error: { (fault:Fault?) in
+                print("Error occured in contacts", (fault?.message!)!)
+            })
+
     }
     func deleteContact(_ contact:InvitationModel){
         invitationsDataStore.remove(byId: contact.objectId)
     }
-    func retrieveAllContacts(){
+    func retrieveAllInvitations(){
         Types.tryblock({
             let queryBuilder:DataQueryBuilder = DataQueryBuilder()
             queryBuilder.setPageSize(100)

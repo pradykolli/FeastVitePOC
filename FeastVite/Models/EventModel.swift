@@ -27,7 +27,7 @@ class EventModel:NSObject{
     var venue: String
     var dateAndTime: String
     var eventInviteTemplate: TemplateModel
-    
+    var invitationsList:[InvitationModel] = []
     
     override init(){
         self.address = ""
