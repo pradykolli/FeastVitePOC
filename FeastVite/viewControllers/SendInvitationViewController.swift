@@ -70,10 +70,16 @@ class SendInvitationViewController: UIViewController {
 //
 //        }
         let invitationObj:InvitationModel = InvitationModel()
+        let currentUser = backendless.userService.currentUser
         let emailAddress = emailTF.text!
         let guest = fetchingUserId(of:emailAddress)
         let contactOfGuest:[ContactModel] = self.getContactObj(of: emailAddress)
-        InvitationModelManager.shared.assign(invitation: invitationObj, To: eventObj, andTo: contactOfGuest[0])
+        if let guestId = guest.objectId{
+            invitationObj.inviteeID = guestId as String
+            invitationObj.hostID = currentUser?.objectId! as String?
+            invitationObj.eventID = eventObj.objectId! as NSString as String
+            InvitationModelManager.shared.assign(invitation: invitationObj, To: eventObj, andTo: contactOfGuest[0])
+        }
         
     }
     

@@ -28,8 +28,10 @@ class ViewController: UIViewController {
         
         let invitation = InvitationModelManager.shared.invitationsArray[0]
         print(invitation)
-        let events = invitation.events
-        print(events.count)
+        let event:EventModel = eventDataStore.find(byId: invitation.eventID) as! EventModel
+        print(event)
+//        let template:TemplateModel = event.eventInviteTemplate
+//        print(template.templateImage)
         
         
 //        eventLBL.text = event.eventType

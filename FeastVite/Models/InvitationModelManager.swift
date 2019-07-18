@@ -30,16 +30,7 @@ class InvitationModelManager{
         let result:InvitationModel = invitationsDataStore.save(invitation) as! InvitationModel
         return result
     }
-//    func send(invitation:InvitationModel, To contact:ContactModel){
-//        let invitationObj = self.invitationsDataStore.save(invitation) as! InvitationModel
-//        self.invitationsDataStore.addRelation("invitationsList:ContactModel:n", parentObjectId: contact.objectId!, childObjects: [invitationObj.objectId!], response: { (NSNumber) in
-//                print(NSNumber)
-//            }, error: { (fault:Fault?) in
-//                print("Error occured", (fault?.message!)!)
-//            }
-//        )
-//        ContactModel.shared.invitationsList.append(invitationObj)
-//    }
+
     func assign(invitation:InvitationModel, To event:EventModel, andTo contact:ContactModel){
         let invitationObj = self.invitationsDataStore.save(invitation) as! InvitationModel
         self.invitationsDataStore.addRelation("invitationsList:EventModel:n", parentObjectId: invitationObj.objectId!, childObjects: [event.objectId!], response: {(NSNumber) in
