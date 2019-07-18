@@ -28,7 +28,6 @@
 		E83B11CD22D02DDA00B8175D /* FeastViteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11B522D02CEC00B8175D /* FeastViteTests.swift */; };
 		E83B11CF22D06E8100B8175D /* TemplateCellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */; };
 		E862FA2522E04C5400DEB0D5 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862FA2422E04C5400DEB0D5 /* CustomLoader.swift */; };
-		E862FA2722E04E6400DEB0D5 /* CustomLoader.gif in Resources */ = {isa = PBXBuildFile; fileRef = E862FA2622E04E6400DEB0D5 /* CustomLoader.gif */; };
 		E89D955C22D73C39009AA662 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D955B22D73C39009AA662 /* EventModel.swift */; };
 		E89D955E22D748DC009AA662 /* EventModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D955D22D748DC009AA662 /* EventModelManager.swift */; };
 		E8B19B3122D55FA600FB6D5A /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2722D55FA600FB6D5A /* PreviewViewController.swift */; };
@@ -108,7 +107,6 @@
 		E83B11C522D02CF600B8175D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E83B11CE22D06E8100B8175D /* TemplateCellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCellCollectionViewCell.swift; sourceTree = "<group>"; };
 		E862FA2422E04C5400DEB0D5 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
-		E862FA2622E04E6400DEB0D5 /* CustomLoader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = CustomLoader.gif; path = ../../../CustomLoader.gif; sourceTree = "<group>"; };
 		E862FA2922E0513F00DEB0D5 /* CustomLoader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = CustomLoader.gif; sourceTree = "<group>"; };
 		E89D955B22D73C39009AA662 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		E89D955D22D748DC009AA662 /* EventModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModelManager.swift; sourceTree = "<group>"; };
@@ -303,7 +301,6 @@
 				E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */,
 				E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */,
 				E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */,
-				E862FA2622E04E6400DEB0D5 /* CustomLoader.gif */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -418,7 +415,6 @@
 			files = (
 				3F8C98A922B18CA5009E1371 /* LaunchScreen.storyboard in Resources */,
 				3F8C98A622B18CA5009E1371 /* Assets.xcassets in Resources */,
-				E862FA2722E04E6400DEB0D5 /* CustomLoader.gif in Resources */,
 				3F8C98A422B18CA3009E1371 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
