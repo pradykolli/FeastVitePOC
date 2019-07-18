@@ -15,6 +15,7 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     var eventObject:EventModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        CustomLoader.instance.hideLoaderView()
         TemplateModelManager.shared.retrieveAllTemplates()
         EventModelManager.shared.retrieveAllEvents()
         print("total number of templates are: ",TemplateModelManager.shared.templatesArray.count)

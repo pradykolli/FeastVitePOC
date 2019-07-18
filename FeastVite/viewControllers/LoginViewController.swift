@@ -7,15 +7,36 @@
 //
 
 import UIKit
-
-// An extension to hide keyboard whenever we click anywhere except the text field. - Pradeep kolli
+var vSpinner:UIView?
+// An extension to hide keyboard whenever we click anywhere except the text field.
+// Also to show and hide spinners as an indicator for loading - Pradeep kolli
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
+    func showSpinner(onView : UIView) {
+        let spinnerView = UIView.init(frame: onView.bounds)
+        spinnerView.backgroundColor = UIColor.gray.withAlphaComponent(0.65)
+        let ai = UIActivityIndicatorView.init(style: .gray)
+        ai.startAnimating()
+        ai.center = spinnerView.center
+        
+        DispatchQueue.main.async {
+            spinnerView.addSubview(ai)
+            onView.addSubview(spinnerView)
+        }
+        
+        vSpinner = spinnerView
+    }
     
+    func removeSpinner() {
+        DispatchQueue.main.async {
+            vSpinner?.removeFromSuperview()
+            vSpinner = nil
+        }
+    }
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -25,15 +46,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var showHidePassword: UIImageView!
     @IBOutlet weak var logoIV: UIImageView!
-    static let shared = LoginViewController()
-
-    @IBOutlet weak var progressView: UIProgressView!
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var stayLoggedInSwitch: UISwitch!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var signUpBTN: UIButton!
     @IBOutlet weak var loginBTN: UIButton!
+    static let shared = LoginViewController()
     var backendless:Backendless?
     var auth:Authentication = Authentication()
     var alertErrors:AlertErrors = AlertErrors()
@@ -47,11 +66,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         signUpBTN.layer.cornerRadius = 15
         loginBTN.layer.cornerRadius = 15
         backgroundView.layer.cornerRadius = 15
-        progressView.layer.cornerRadius = 5
-        
-        progressView.clipsToBounds = true
-        progressView.layer.sublayers![1].cornerRadius = 5
-        progressView.subviews[1].clipsToBounds = true
         backendless = Backendless.sharedInstance()
         passwordTF.delegate = self
         emailTF.delegate = self
@@ -136,6 +150,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             passwordTF.layer.borderColor = UIColor.green.cgColor
             let userEmail = emailTF.text!
             let userPassword = passwordTF.text!
+//            self.showSpinner(onView: self.view)
+            CustomLoader.instance.showLoaderView()
             loginUser(email: userEmail, password: userPassword)
         }
     }
@@ -171,6 +187,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if (loginValidUser != nil){
                     isValid = true
                 }
+
             }
             else{
                 self.backendless?.userService.setStayLoggedIn(false)
@@ -180,8 +197,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if (loginValidUser != nil){
                     isValid = true
                 }
+//                self.removeSpinner()
+
             }
         }, error: { (fault:Fault?) in
+            self.removeSpinner()
             self.emailTF.layer.borderWidth = CGFloat(2)
             self.emailTF.layer.borderColor = UIColor.red.cgColor
             self.passwordTF.layer.borderWidth = CGFloat(2)
