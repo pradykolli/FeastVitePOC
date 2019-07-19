@@ -201,7 +201,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
             }
         }, error: { (fault:Fault?) in
-            self.removeSpinner()
+            CustomLoader.instance.hideLoaderView()
             self.emailTF.layer.borderWidth = CGFloat(2)
             self.emailTF.layer.borderColor = UIColor.red.cgColor
             self.passwordTF.layer.borderWidth = CGFloat(2)

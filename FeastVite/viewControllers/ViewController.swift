@@ -30,7 +30,10 @@ class ViewController: UIViewController {
         print(invitation)
         let event:EventModel = eventDataStore.find(byId: invitation.eventID) as! EventModel
         print(event)
-//        let template:TemplateModel = event.eventInviteTemplate
+        let template = EventModelManager.shared.getTemplate(relatedto: event)
+        eventLBL.text = event.eventType
+        imageView.image = TemplateModelManager.shared.getImage(fromTemplateURL: template.templateImage)
+        //        let template:TemplateModel = event.eventInviteTemplate
 //        print(template.templateImage)
         
         
@@ -38,7 +41,7 @@ class ViewController: UIViewController {
 //        let template = abc.eventInviteTemplate
 //        imageView.image = TemplateModelManager.shared.getImage(fromTemplateURL: template.templateImage)
     }
-
+    
 
 }
 

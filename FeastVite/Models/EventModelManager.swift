@@ -62,4 +62,17 @@ class EventModelManager{
         })
         
     }
+    func getTemplate(relatedto event:EventModel) -> TemplateModel{
+        let dataStore = backendless.data.of(EventModel.self)
+        
+        // Prepare LoadRelationsQueryBuilder
+        let loadRelationsQueryBuilder = LoadRelationsQueryBuilder.of(TemplateModel.self)
+        loadRelationsQueryBuilder!.setRelationName("eventInviteTemplate")
+        
+        let objectId = event.objectId// removed for brevity
+        
+        let templates = dataStore!.loadRelations(objectId, queryBuilder: loadRelationsQueryBuilder) as! [TemplateModel]
+        return templates[0]
+        
+    }
 }
