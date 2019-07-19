@@ -79,7 +79,8 @@ class SendInvitationViewController: UIViewController {
 //      
             invitationObj.inviteeID = guestId as String
             invitationObj.hostID = currentUser?.objectId! as String?
-            invitationObj.eventID = eventObj.objectId! as NSString as String
+            invitationObj.eventID = eventObj.objectId!
+                as String
             InvitationModelManager.shared.assign(invitation: invitationObj, To: eventObj, andTo: contactOfGuest[0])
         }
         
