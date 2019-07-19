@@ -13,6 +13,7 @@ class InvitationModelManager{
     let backendless = Backendless.sharedInstance()!
     var invitationsDataStore:IDataStore!
     var invitationsArray:[InvitationModel] =  []
+    var invitationsRecievedArray:[InvitationModel] = []
     static var shared:InvitationModelManager = InvitationModelManager()
     private init(){
         invitationsDataStore = backendless.data.of(InvitationModel.self)
@@ -60,4 +61,20 @@ class InvitationModelManager{
         })
         
     }
+    
+    func retrieveInvitationsRecievedTo(_ contactID:String) -> [InvitationModel]{
+        Types.tryblock({
+            let whereClause = "inviteeID = '" + contactID + "'"
+            let queryBuilder:DataQueryBuilder = DataQueryBuilder()
+            queryBuilder.setPageSize(10)
+            queryBuilder.setWhereClause(whereClause)
+            let result = self.invitationsDataStore.find(queryBuilder) as! [InvitationModel]
+            self.invitationsRecievedArray = result
+        },
+       catchblock: {(exception) -> Void in
+            print("Error getting contatcs",exception!)
+        })
+        return invitationsRecievedArray
+    }
+    
 }

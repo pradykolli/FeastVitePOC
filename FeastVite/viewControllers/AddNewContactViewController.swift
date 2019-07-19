@@ -28,6 +28,11 @@ class AddNewContactViewController: UIViewController {
         contact.emailAddress = emailAddressTF.text!
         contact.phone = phoneNumberTF.text!
         contact.name = contactNameTF.text!
+        let user:BackendlessUser! = SendInvitationViewController.shared.fetchingUserId(of: emailAddressTF.text!)
+        if user != nil {
+            contact.isValidUser = true;
+            contact.userId = user.objectId! as String
+        }
         ContactModelManager.shared.addContact(contact)
         self.dismiss(animated: true, completion: nil)
     }

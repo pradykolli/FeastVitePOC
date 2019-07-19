@@ -13,6 +13,7 @@ class SendInvitationViewController: UIViewController {
     var contactsDataStore:IDataStore!
     var fetchedContactObj:[ContactModel] = []
     var eventObj:EventModel!
+    static var shared:SendInvitationViewController! = SendInvitationViewController()
     @IBOutlet weak var emailTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,7 @@ class SendInvitationViewController: UIViewController {
         let guest = fetchingUserId(of:emailAddress)
         let contactOfGuest:[ContactModel] = self.getContactObj(of: emailAddress)
         if let guestId = guest.objectId{
+//      
             invitationObj.inviteeID = guestId as String
             invitationObj.hostID = currentUser?.objectId! as String?
             invitationObj.eventID = eventObj.objectId! as NSString as String

@@ -16,6 +16,8 @@ class ContactModel : NSObject {
     var name:String!
     var phone:String!
     var invitationsContacts:[InvitationModel] = []
+    var isValidUser:Bool = false
+    var userId:String!
     var objectId:String?
     private static var _shared:ContactModel!
     static var shared:ContactModel{
