@@ -58,10 +58,12 @@ class ViewInvitationsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InvitationCell", for: indexPath)
+        if indexPath.section == 1 {
+        
         
         let invitations:[InvitationModel] = InvitationModelManager.shared.invitationsRecievedArray
         print(invitations)
-        
+        print(invitations[indexPath.item].eventID)
         let event:EventModel = eventDataStore.find(byId: invitations[indexPath.row].eventID) as! EventModel
         print(event)
         cell.textLabel?.text = event.eventType
@@ -69,7 +71,13 @@ class ViewInvitationsTableViewController: UITableViewController {
         cell.detailTextLabel?.text = template.templateName
         // Configure the cell...
 
-        return cell
+       
+        }
+//        else{
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "HostedEventCell", for: indexPath)
+//            return cell
+//        }
+         return cell
     }
  
     override func viewWillAppear(_ animated: Bool) {

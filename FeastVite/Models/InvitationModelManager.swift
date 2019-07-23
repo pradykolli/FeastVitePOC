@@ -69,6 +69,7 @@ class InvitationModelManager{
             queryBuilder.setPageSize(10)
             queryBuilder.setWhereClause(whereClause)
             let result = self.invitationsDataStore.find(queryBuilder) as! [InvitationModel]
+            
             self.invitationsRecievedArray = result
         },
        catchblock: {(exception) -> Void in
