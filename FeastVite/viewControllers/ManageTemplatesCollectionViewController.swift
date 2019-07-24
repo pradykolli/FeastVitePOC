@@ -13,11 +13,15 @@ private let reuseIdentifier = "Cell"
 class ManageTemplatesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let backendless = Backendless.sharedInstance()!
     var eventObject:EventModel!
+    var dictOfEventTemplate:[EventModel:TemplateModel] = [:]
     override func viewDidLoad() {
         super.viewDidLoad()
         CustomLoader.instance.hideLoaderView()
         TemplateModelManager.shared.retrieveAllTemplates()
         EventModelManager.shared.retrieveAllEvents()
+        for event in EventModelManager.shared.eventsArray{
+            dictOfEventTemplate[event] = EventModelManager.shared.getTemplate(relatedto: event)
+        }
         print("total number of templates are: ",TemplateModelManager.shared.templatesArray.count)
         let currentUser : BackendlessUser = backendless.userService.currentUser
         print("Current user",currentUser.objectId!)
@@ -25,12 +29,12 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        if let sendInvitation = segue.destination as? SendInvitationViewController {
-            sendInvitation.eventObj = self.eventObject
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using [segue destinationViewController].
+//        if let sendInvitation = segue.destination as? SendInvitationViewController {
+//            sendInvitation.eventObj = self.eventObject
+//        }
+//    }
  
 
     // MARK: UICollectionViewDataSource
@@ -43,22 +47,29 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return TemplateModelManager.shared.templatesArray.count
+        return EventModelManager.shared.eventsArray.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // Configure the cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TemplateCollectionViewCell
         eventObject = EventModelManager.shared.eventsArray[indexPath.item]
-        let templateImageURL = TemplateModelManager.shared.templatesArray[indexPath.item].templateImage!
+        let templateObject:TemplateModel = dictOfEventTemplate[eventObject]!
+        let templateImageURL = templateObject.templateImage!
         let templateImage:UIImage = TemplateModelManager.shared.getImage(fromTemplateURL: templateImageURL)
         cell.templatePreviewImage.image = templateImage
-        cell.templateNameLBL.text = TemplateModelManager.shared.templatesArray[indexPath.item].templateName
+        cell.templateNameLBL.text = templateObject.templateName
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.item)
+        eventObject = EventModelManager.shared.eventsArray[indexPath.item]
+        SendInvitationViewController.eventObj = eventObject
+        print("didselect:",eventObject.eventType)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let senderView = storyboard.instantiateViewController(withIdentifier: "SenderView")
+        self.navigationController?.pushViewController(senderView, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let rowSize:CGFloat = UIScreen.main.bounds.width - 12
@@ -73,11 +84,15 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        TemplateModelManager.shared.retrieveAllTemplates()
+        EventModelManager.shared.retrieveAllEvents()
+        for event in EventModelManager.shared.eventsArray{
+            dictOfEventTemplate[event] = EventModelManager.shared.getTemplate(relatedto: event)
+        }
         self.collectionView.performBatchUpdates({
             self.collectionView.reloadSections(IndexSet(integer: 0))
             collectionView.reloadData()
         }, completion: nil)
-        TemplateModelManager.shared.retrieveAllTemplates()
     }
     
     // MARK: UICollectionViewDelegate

@@ -12,7 +12,7 @@ class SendInvitationViewController: UIViewController {
     var backendless:Backendless! = Backendless.sharedInstance()
     var contactsDataStore:IDataStore!
     var fetchedContactObj:[ContactModel] = []
-    var eventObj:EventModel!
+    static var eventObj:EventModel!
     static var shared:SendInvitationViewController! = SendInvitationViewController()
     @IBOutlet weak var emailTF: UITextField!
     override func viewDidLoad() {
@@ -79,9 +79,9 @@ class SendInvitationViewController: UIViewController {
 //      
             invitationObj.inviteeID = guestId as String
             invitationObj.hostID = currentUser?.objectId! as String?
-            invitationObj.eventID = eventObj.objectId!
+            invitationObj.eventID = SendInvitationViewController.eventObj.objectId!
                 as String
-            InvitationModelManager.shared.assign(invitation: invitationObj, To: eventObj, andTo: contactOfGuest[0])
+            InvitationModelManager.shared.assign(invitation: invitationObj, To: SendInvitationViewController.eventObj, andTo: contactOfGuest[0])
         }
         
     }

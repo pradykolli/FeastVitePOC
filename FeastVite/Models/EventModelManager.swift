@@ -15,11 +15,13 @@ class EventModelManager{
     var eventDataStore:IDataStore!
     var templatesDataStore:IDataStore!
     var eventsArray:[EventModel] =  []
+    let currentUser:BackendlessUser!
     static var shared:EventModelManager = EventModelManager()
     var eventObj:EventModel!
     private init(){
         eventDataStore = backendless.data.of(EventModel.self)
         templatesDataStore = backendless.data.of(TemplateModel.self)
+        currentUser = backendless.userService.currentUser
 
     }
     subscript(index:Int) -> EventModel {
@@ -52,8 +54,10 @@ class EventModelManager{
     }
     func retrieveAllEvents(){
         Types.tryblock({
+            let whereClause = "ownerId = '" + (self.currentUser.objectId! as String) + "'"
             let queryBuilder:DataQueryBuilder = DataQueryBuilder()
             queryBuilder.setPageSize(100)
+            queryBuilder.setWhereClause(whereClause)
             let result = self.eventDataStore.find(queryBuilder) as! [EventModel]
             self.eventsArray = result
         },
