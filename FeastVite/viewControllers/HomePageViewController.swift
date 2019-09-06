@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 private let reuseIdentifier = "Cell"
 class HomePageViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -23,6 +24,8 @@ class HomePageViewController: UIViewController,UICollectionViewDelegate, UIColle
         self.navigationItem.setHidesBackButton(true, animated: true)
         let rightBarButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logoutBTNClicked(_:)))
         navigationItem.rightBarButtonItem = rightBarButton
+        let content = UNMutableNotificationContent()
+        content.badge = 10 // your badge count
 
     }
     
