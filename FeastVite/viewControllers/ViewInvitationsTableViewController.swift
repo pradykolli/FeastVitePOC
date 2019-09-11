@@ -59,8 +59,6 @@ class ViewInvitationsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InvitationCell", for: indexPath)
         if indexPath.section == 1 {
-        
-        
         let invitations:[InvitationModel] = InvitationModelManager.shared.invitationsRecievedArray
         print(invitations)
         print(invitations[indexPath.item].eventID)
