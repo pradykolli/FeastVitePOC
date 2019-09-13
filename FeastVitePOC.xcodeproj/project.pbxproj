@@ -200,11 +200,7 @@
 		3F8C989222B18CA3009E1371 = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
-				3F9D63B92329412C0023273D /* FeastVitePOC.entitlements */,
-=======
 				E8C5D7342328682C00985304 /* FeastVitePOC.entitlements */,
->>>>>>> 9e56ee87bd85e6b8f3e31c607e1f17460715ac43
 				3F8C989D22B18CA3009E1371 /* FeastVite */,
 				E83B11B422D02CEC00B8175D /* FeastViteTests */,
 				E83B11C222D02CF600B8175D /* FeastViteUITests */,
@@ -328,12 +324,9 @@
 				E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */,
 				E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */,
 				E8424D0422E14FDB00893B27 /* ViewInvitationsTableViewController.swift */,
-<<<<<<< HEAD
 				3F9D63B3232708950023273D /* RSVPViewController.swift */,
 				3F9D63B7232935180023273D /* HostedDetailsViewController.swift */,
-=======
 				E8E9172E2326FE2F000C3F3E /* ChatViewController.swift */,
->>>>>>> 9e56ee87bd85e6b8f3e31c607e1f17460715ac43
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -411,7 +404,6 @@
 					3F8C989A22B18CA3009E1371 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
-<<<<<<< HEAD
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -424,11 +416,9 @@
 							com.apple.iCloud = {
 								enabled = 0;
 							};
-=======
 							com.apple.Push = {
 								enabled = 1;
 							};
->>>>>>> 9e56ee87bd85e6b8f3e31c607e1f17460715ac43
 						};
 					};
 					E83B11B222D02CEC00B8175D = {
