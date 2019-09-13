@@ -14,6 +14,8 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     let backendless = Backendless.sharedInstance()!
     var eventObject:EventModel!
     var dictOfEventTemplate:[EventModel:TemplateModel] = [:]
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         CustomLoader.instance.hideLoaderView()
@@ -21,12 +23,24 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
         EventModelManager.shared.retrieveAllEvents()
         for event in EventModelManager.shared.eventsArray{
             dictOfEventTemplate[event] = EventModelManager.shared.getTemplate(relatedto: event)
+            
         }
         print("total number of templates are: ",TemplateModelManager.shared.templatesArray.count)
         let currentUser : BackendlessUser = backendless.userService.currentUser
         print("Current user",currentUser.objectId!)
+        
+        let chatBTN = UIButton(frame: CGRect(x: 0, y: 25, width: 65, height: 65))
+        chatBTN.layer.zPosition = 1000
+        chatBTN.layer.cornerRadius = 25
+        chatBTN.setImage(UIImage(named: "chat63"), for: .normal)
+        chatBTN.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.view.addSubview(chatBTN)
     }
-    
+    @objc func buttonAction(sender: UIButton!) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController") 
+        self.navigationController?.pushViewController(chatViewController, animated: true)
+    }
     // MARK: - Navigation
     // In a storyboard-based application, you will often want to do a little preparation before navigation
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

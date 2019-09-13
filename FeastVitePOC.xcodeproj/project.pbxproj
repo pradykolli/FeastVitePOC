@@ -41,6 +41,7 @@
 		E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */; };
 		E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */; };
 		E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */; };
+		E8E9172F2326FE2F000C3F3E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9172E2326FE2F000C3F3E /* ChatViewController.swift */; };
 		E8F903BB22DD412A00047D21 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */; };
 		E8F903BD22DD416C00047D21 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BC22DD416C00047D21 /* ContactModel.swift */; };
 		E8F903BF22DD4C3D00047D21 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */; };
@@ -128,6 +129,8 @@
 		E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageTemplatesCollectionViewController.swift; sourceTree = "<group>"; };
 		E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTemplateImageViewController.swift; sourceTree = "<group>"; };
+		E8C5D7342328682C00985304 /* FeastVitePOC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeastVitePOC.entitlements; sourceTree = "<group>"; };
+		E8E9172E2326FE2F000C3F3E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		E8F903BC22DD416C00047D21 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
@@ -197,7 +200,11 @@
 		3F8C989222B18CA3009E1371 = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				3F9D63B92329412C0023273D /* FeastVitePOC.entitlements */,
+=======
+				E8C5D7342328682C00985304 /* FeastVitePOC.entitlements */,
+>>>>>>> 9e56ee87bd85e6b8f3e31c607e1f17460715ac43
 				3F8C989D22B18CA3009E1371 /* FeastVite */,
 				E83B11B422D02CEC00B8175D /* FeastViteTests */,
 				E83B11C222D02CF600B8175D /* FeastViteUITests */,
@@ -321,8 +328,12 @@
 				E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */,
 				E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */,
 				E8424D0422E14FDB00893B27 /* ViewInvitationsTableViewController.swift */,
+<<<<<<< HEAD
 				3F9D63B3232708950023273D /* RSVPViewController.swift */,
 				3F9D63B7232935180023273D /* HostedDetailsViewController.swift */,
+=======
+				E8E9172E2326FE2F000C3F3E /* ChatViewController.swift */,
+>>>>>>> 9e56ee87bd85e6b8f3e31c607e1f17460715ac43
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -400,6 +411,7 @@
 					3F8C989A22B18CA3009E1371 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
+<<<<<<< HEAD
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -412,6 +424,11 @@
 							com.apple.iCloud = {
 								enabled = 0;
 							};
+=======
+							com.apple.Push = {
+								enabled = 1;
+							};
+>>>>>>> 9e56ee87bd85e6b8f3e31c607e1f17460715ac43
 						};
 					};
 					E83B11B222D02CEC00B8175D = {
@@ -595,6 +612,7 @@
 				E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */,
 				3F8C989F22B18CA3009E1371 /* AppDelegate.swift in Sources */,
 				3FBFFC1B22C45B59007C1182 /* Authentication.swift in Sources */,
+				E8E9172F2326FE2F000C3F3E /* ChatViewController.swift in Sources */,
 				E8F903BB22DD412A00047D21 /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

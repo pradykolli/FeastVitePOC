@@ -1126,6 +1126,46 @@
             </objects>
             <point key="canvasLocation" x="1948" y="-270"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="3lj-iX-wf0">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="C9s-i2-ND8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lb4-pf-g34">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fzU-Fx-8Ic">
+                                <rect key="frame" x="0.0" y="59" width="375" height="674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hYx-cv-Tay">
+                                <rect key="frame" x="0.0" y="748" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fzU-Fx-8Ic" firstAttribute="trailing" secondItem="Shv-BG-mWC" secondAttribute="trailing" id="3yY-p0-YWT"/>
+                            <constraint firstItem="hYx-cv-Tay" firstAttribute="leading" secondItem="Shv-BG-mWC" secondAttribute="leading" id="4Xk-4b-tK2"/>
+                            <constraint firstItem="fzU-Fx-8Ic" firstAttribute="top" secondItem="Shv-BG-mWC" secondAttribute="top" constant="15" id="7sS-lr-mNw"/>
+                            <constraint firstItem="fzU-Fx-8Ic" firstAttribute="leading" secondItem="Shv-BG-mWC" secondAttribute="leading" id="QvX-Ci-b1g"/>
+                            <constraint firstItem="hYx-cv-Tay" firstAttribute="bottom" secondItem="Shv-BG-mWC" secondAttribute="bottom" id="WZS-wK-7Zg"/>
+                            <constraint firstItem="hYx-cv-Tay" firstAttribute="top" secondItem="fzU-Fx-8Ic" secondAttribute="bottom" constant="15" id="XQs-4s-2EW"/>
+                            <constraint firstItem="hYx-cv-Tay" firstAttribute="trailing" secondItem="Shv-BG-mWC" secondAttribute="trailing" id="Xjx-jJ-GJt"/>
+                            <constraint firstItem="hYx-cv-Tay" firstAttribute="top" secondItem="fzU-Fx-8Ic" secondAttribute="bottom" constant="15" id="ycR-yV-iwl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Shv-BG-mWC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cw2-8v-Qbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6208.8000000000002" y="-1324.1379310344828"/>
+        </scene>
         <!--Send Invitation View Controller-->
         <scene sceneID="71j-7d-jDi">
             <objects>
