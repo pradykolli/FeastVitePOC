@@ -43,20 +43,6 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    func pushMessage(message: String) {
-        let publishOptions = PublishOptions()
-        publishOptions.assignHeaders(["ios-alert": "alert", "ios-badge": 1, "ios-sound": "default"])
-        
-        let deliveryOptions = DeliveryOptions()
-        deliveryOptions.publishAt = Date(timeIntervalSinceNow: 10)
-        //        deliveryOptions.publishPolicy(PublishPolicyEnum.RawValue)
-        
-        backendless.messaging.publish("default", message: message, publishOptions: publishOptions, deliveryOptions: deliveryOptions, response: { status in
-            UIAlertView.init(title: "Push succeed", message: "Message has been pushed. Wait for notification in 10 seconds", delegate: nil, cancelButtonTitle: "OK").show()
-        }, error: { fault in
-            UIAlertView.init(title: "Device registration failed", message: fault?.message ?? "", delegate: nil, cancelButtonTitle: "OK").show()
-        })
-    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
