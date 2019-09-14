@@ -17,6 +17,7 @@ class TemplateModel : NSObject {
     var templateImage:String!
     var templateName:String!
     var objectId:String?
+    var eventId:String?
     private static var _shared:TemplateModel!
     static var shared:TemplateModel{
         if _shared == nil {

@@ -80,4 +80,18 @@ class TemplateModelManager{
     })
     
     }
+    
+    func retrieveTemplateById(_ id:String) -> [InvitationModel]{
+        var tempalte:[InvitationModel] = []
+        Types.tryblock({
+            let whereClause = "eventId = '" + id + "'"
+            let queryBuilder:DataQueryBuilder = DataQueryBuilder()
+            queryBuilder.setWhereClause(whereClause)
+            tempalte = self.templatesDataStore.find(queryBuilder) as! [InvitationModel]
+        }) { (exception) in
+            print(exception.debugDescription)
+        }
+       
+        return tempalte
+    }
 }

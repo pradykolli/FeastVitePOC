@@ -77,5 +77,19 @@ class InvitationModelManager{
         })
         return invitationsRecievedArray
     }
+    func retrieveTemplateById(_ id:String) -> [InvitationModel]{
+        var tempalte:[InvitationModel] = []
+        Types.tryblock({
+            let whereClause = "eventId = '" + id + "'"
+            let queryBuilder:DataQueryBuilder = DataQueryBuilder()
+            queryBuilder.setWhereClause(whereClause)
+            tempalte = self.invitationsDataStore.find(queryBuilder) as! [InvitationModel]
+            let event = tempalte[0].events[0].invitationsList[0]
+        }) { (exception) in
+            print(exception.debugDescription)
+        }
+        
+        return tempalte
+    }
     
 }

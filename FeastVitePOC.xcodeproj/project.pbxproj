@@ -16,6 +16,11 @@
 		3F8C98A422B18CA3009E1371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8C98A222B18CA3009E1371 /* Main.storyboard */; };
 		3F8C98A622B18CA5009E1371 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F8C98A522B18CA5009E1371 /* Assets.xcassets */; };
 		3F8C98A922B18CA5009E1371 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8C98A722B18CA5009E1371 /* LaunchScreen.storyboard */; };
+		3F9D63AF232708340023273D /* RSVPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D63AE232708340023273D /* RSVPModel.swift */; };
+		3F9D63B4232708950023273D /* RSVPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D63B3232708950023273D /* RSVPViewController.swift */; };
+		3F9D63B623270DF40023273D /* RSVPModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D63B523270DF40023273D /* RSVPModelManager.swift */; };
+		3F9D63B8232935180023273D /* HostedDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D63B7232935180023273D /* HostedDetailsViewController.swift */; };
+		3F9D63BB2329446C0023273D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9D63BA2329446C0023273D /* StoreKit.framework */; };
 		3FBFFC1B22C45B59007C1182 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBFFC1A22C45B59007C1182 /* Authentication.swift */; };
 		3FCADC3522C1C4A000705A32 /* MailSenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCADC3422C1C4A000705A32 /* MailSenderViewController.swift */; };
 		3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF02C2322B3512E008A787A /* RegistrationViewController.swift */; };
@@ -82,6 +87,12 @@
 		3F8C98A522B18CA5009E1371 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F8C98A822B18CA5009E1371 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F8C98AA22B18CA5009E1371 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F9D63AE232708340023273D /* RSVPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPModel.swift; sourceTree = "<group>"; };
+		3F9D63B3232708950023273D /* RSVPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPViewController.swift; sourceTree = "<group>"; };
+		3F9D63B523270DF40023273D /* RSVPModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPModelManager.swift; sourceTree = "<group>"; };
+		3F9D63B7232935180023273D /* HostedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedDetailsViewController.swift; sourceTree = "<group>"; };
+		3F9D63B92329412C0023273D /* FeastVitePOC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeastVitePOC.entitlements; sourceTree = "<group>"; };
+		3F9D63BA2329446C0023273D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3FBFFC1A22C45B59007C1182 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		3FCADC3422C1C4A000705A32 /* MailSenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSenderViewController.swift; sourceTree = "<group>"; };
 		3FF02C2322B3512E008A787A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F065B3595D0FC9F30C4F43E7 /* Pods_FeastVitePOC.framework in Frameworks */,
+				3F9D63BB2329446C0023273D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +182,8 @@
 				E8F903C022DE33F600047D21 /* ContactModelManager.swift */,
 				E8F903C222DE64F100047D21 /* InvitationModel.swift */,
 				E8F903C422DEF93300047D21 /* InvitationModelManager.swift */,
+				3F9D63AE232708340023273D /* RSVPModel.swift */,
+				3F9D63B523270DF40023273D /* RSVPModelManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 		CDF978945703639B9E199530 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F9D63BA2329446C0023273D /* StoreKit.framework */,
 				3FF2BAEF22CA68ED000622F8 /* Foundation.framework */,
 				2A9F284D22B8A70700DB1111 /* libsqlite3.0.tbd */,
 				2A9F284B22B890D500DB1111 /* libsqlite3.tbd */,
@@ -309,6 +324,8 @@
 				E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */,
 				E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */,
 				E8424D0422E14FDB00893B27 /* ViewInvitationsTableViewController.swift */,
+				3F9D63B3232708950023273D /* RSVPViewController.swift */,
+				3F9D63B7232935180023273D /* HostedDetailsViewController.swift */,
 				E8E9172E2326FE2F000C3F3E /* ChatViewController.swift */,
 			);
 			path = viewControllers;
@@ -387,6 +404,18 @@
 					3F8C989A22B18CA3009E1371 = {
 						CreatedOnToolsVersion = 10.0;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -549,11 +578,14 @@
 				E862FA2522E04C5400DEB0D5 /* CustomLoader.swift in Sources */,
 				E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */,
 				E8F903BF22DD4C3D00047D21 /* AddNewContactViewController.swift in Sources */,
+				3F9D63B623270DF40023273D /* RSVPModelManager.swift in Sources */,
 				3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */,
 				3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */,
 				E82EF4FC22D595E30095264A /* AccountsViewController.swift in Sources */,
+				3F9D63B8232935180023273D /* HostedDetailsViewController.swift in Sources */,
 				E8424D0522E14FDB00893B27 /* ViewInvitationsTableViewController.swift in Sources */,
 				3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */,
+				3F9D63B4232708950023273D /* RSVPViewController.swift in Sources */,
 				E8F903C722DF07BC00047D21 /* SendInvitationViewController.swift in Sources */,
 				E8B19B3122D55FA600FB6D5A /* PreviewViewController.swift in Sources */,
 				3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */,
@@ -563,6 +595,7 @@
 				3F8C98A122B18CA3009E1371 /* ViewController.swift in Sources */,
 				E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */,
 				E89D955C22D73C39009AA662 /* EventModel.swift in Sources */,
+				3F9D63AF232708340023273D /* RSVPModel.swift in Sources */,
 				E82EF50022D59E290095264A /* TemplateModelManager.swift in Sources */,
 				E82EF4FE22D598C20095264A /* TemplateModel.swift in Sources */,
 				E89D955E22D748DC009AA662 /* EventModelManager.swift in Sources */,
@@ -797,7 +830,7 @@
 				DEVELOPMENT_TEAM = 46U4243C76;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = FeastViteTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -805,7 +838,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.prady.FeastViteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeastVitePOC.app/FeastVitePOC";
 			};
@@ -820,7 +853,7 @@
 				DEVELOPMENT_TEAM = 46U4243C76;
 				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = FeastViteTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -828,7 +861,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.prady.FeastViteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FeastVitePOC.app/FeastVitePOC";
 			};
@@ -849,7 +882,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.prady.FeastViteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FeastVite;
 			};
@@ -870,7 +903,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.prady.FeastViteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = FeastVite;
 			};

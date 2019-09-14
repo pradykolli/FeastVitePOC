@@ -62,7 +62,7 @@ class EventModelManager{
             self.eventsArray = result
         },
                        catchblock: {(exception) -> Void in
-                        print("Error gettiing scores")
+                        print("Error gettiing Templates")
         })
         
     }

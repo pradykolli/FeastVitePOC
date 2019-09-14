@@ -28,6 +28,7 @@ class EventModel:NSObject{
     var dateAndTime: String
     var eventInviteTemplate: TemplateModel
     var invitationsList:[InvitationModel] = []
+    var guestCount:Int
     
     override init(){
         self.address = ""
@@ -38,5 +39,6 @@ class EventModel:NSObject{
         self.venue = ""
         let templateObj = TemplateModel.shared
         self.eventInviteTemplate = templateObj
+        self.guestCount = 0
     }
 }

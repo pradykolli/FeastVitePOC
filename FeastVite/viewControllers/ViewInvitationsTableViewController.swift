@@ -10,10 +10,12 @@ import UIKit
 
 class ViewInvitationsTableViewController: UITableViewController {
     var invitationsRecieved:[InvitationModel] = []
+    var eventsHosted:[EventModel] = []
     var backendless:Backendless! = Backendless.sharedInstance()
     var invitationsDataStore:IDataStore!
     var eventDataStore:IDataStore!
     var templateDataStore:IDataStore!
+    var sections = ["Hosted Events", "Invited Events"]
     override func viewDidLoad() {
         super.viewDidLoad()
         invitationsDataStore = backendless.data.of(InvitationModel.self)
@@ -24,33 +26,28 @@ class ViewInvitationsTableViewController: UITableViewController {
         EventModelManager.shared.retrieveAllEvents()
         TemplateModelManager.shared.retrieveAllTemplates()
         let currentUser = backendless.userService.currentUser!
-        invitationsRecieved = InvitationModelManager.shared.retrieveInvitationsRecievedTo(currentUser.objectId as! String)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        invitationsRecieved = InvitationModelManager.shared.retrieveInvitationsRecievedTo(currentUser.objectId! as String)
+        eventsHosted = EventModelManager.shared.eventsArray
+        print(eventsHosted.count)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return sections.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return invitationsRecieved.count
-    }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Hosted events"
+        // #warning Incomplete implementation, return the number of rows'
+        if section == 0{
+            return eventsHosted.count
         }
         else{
-            return "Invited events"
-        }
+            return invitationsRecieved.count}
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sections[section]
     }
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50;
@@ -60,26 +57,49 @@ class ViewInvitationsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InvitationCell", for: indexPath)
         if indexPath.section == 1 {
         let invitations:[InvitationModel] = InvitationModelManager.shared.invitationsRecievedArray
-        print(invitations)
-        print(invitations[indexPath.item].eventID)
         let event:EventModel = eventDataStore.find(byId: invitations[indexPath.row].eventID) as! EventModel
-        print(event)
         cell.textLabel?.text = event.eventType
         let template = EventModelManager.shared.getTemplate(relatedto: event)
         cell.detailTextLabel?.text = template.templateName
-        // Configure the cell...
-
        
         }
-//        else{
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "HostedEventCell", for: indexPath)
-//            return cell
-//        }
+        else{
+            let hosted:[EventModel] = EventModelManager.shared.eventsArray
+            let hostEvent = eventDataStore.find(byId: hosted[indexPath.row].objectId) as! EventModel
+            cell.textLabel?.text = hostEvent.eventType
+            cell.detailTextLabel?.text = EventModelManager.shared.getTemplate(relatedto: hostEvent).templateName
+        }
          return cell
     }
  
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section{
+        case 0:
+            print("Hello")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let hosted = storyboard.instantiateViewController(withIdentifier: "HostedDetails") as! HostedDetailsViewController
+            self.navigationController?.pushViewController(hosted, animated: true)
+
+        case 1:
+            let value = invitationsRecieved[indexPath.row].eventID
+//            RSVPViewController.shared.imagePreview = value
+            print(value)
+            let image = InvitationModelManager.shared.retrieveTemplateById(value!)
+            let imageData = TemplateModelManager.shared.getImage(fromTemplateURL: image[0].eventID)
+            RSVPViewController.shared.image = imageData
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let current = storyboard.instantiateViewController(withIdentifier: "RSVP") as! RSVPViewController
+            self.navigationController?.pushViewController(current, animated: true)
+
+        default:
+            break
+        }
+//        self.performSegue(withIdentifier: identifierForView!, sender: self)
+        
     }
     /*
     // Override to support conditional editing of the table view.
