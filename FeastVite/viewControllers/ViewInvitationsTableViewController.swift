@@ -15,6 +15,7 @@ class ViewInvitationsTableViewController: UITableViewController {
     var invitationsDataStore:IDataStore!
     var eventDataStore:IDataStore!
     var templateDataStore:IDataStore!
+    static var clickedInvitedEvent:EventModel!
     var sections = ["Hosted Events", "Invited Events"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +59,7 @@ class ViewInvitationsTableViewController: UITableViewController {
         if indexPath.section == 1 {
         let invitations:[InvitationModel] = InvitationModelManager.shared.invitationsRecievedArray
         let event:EventModel = eventDataStore.find(byId: invitations[indexPath.row].eventID) as! EventModel
+//            ViewInvitationsTableViewController.clickedInvitedEvent = event
         cell.textLabel?.text = event.eventType
         let template = EventModelManager.shared.getTemplate(relatedto: event)
         cell.detailTextLabel?.text = template.templateName
@@ -85,12 +87,8 @@ class ViewInvitationsTableViewController: UITableViewController {
             self.navigationController?.pushViewController(hosted, animated: true)
 
         case 1:
-            let value = invitationsRecieved[indexPath.row].eventID
-//            RSVPViewController.shared.imagePreview = value
-            print(value)
-            let image = InvitationModelManager.shared.retrieveTemplateById(value!)
-            let imageData = TemplateModelManager.shared.getImage(fromTemplateURL: image[0].eventID)
-            RSVPViewController.shared.image = imageData
+            let invitations:[InvitationModel] = InvitationModelManager.shared.invitationsRecievedArray
+            ViewInvitationsTableViewController.clickedInvitedEvent = (eventDataStore.find(byId: invitations[indexPath.row].eventID) as! EventModel)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let current = storyboard.instantiateViewController(withIdentifier: "RSVP") as! RSVPViewController
             self.navigationController?.pushViewController(current, animated: true)
@@ -136,14 +134,21 @@ class ViewInvitationsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "InvitedEvents"{
+            let destinationVC = segue.destination as! RSVPViewController
+            destinationVC.eventInvitation = ViewInvitationsTableViewController.clickedInvitedEvent
+        }
+        else{
+            
+        }
     }
-    */
+ 
 
 }

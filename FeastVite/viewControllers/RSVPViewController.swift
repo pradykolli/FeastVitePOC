@@ -13,13 +13,19 @@ class RSVPViewController: UIViewController {
     
     
     static let shared = RSVPViewController()
-    
+    var eventInvitation:EventModel!
     @IBOutlet weak var imagePreview: UIImageView!
     var image:UIImage!
     
     @IBOutlet weak var guestCount: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePreview.image = nil
+        eventInvitation = ViewInvitationsTableViewController.clickedInvitedEvent
+        let templateRelatedToEvent = EventModelManager.shared.getTemplate(relatedto: eventInvitation)
+        let imageData = templateRelatedToEvent.templateImage
+        image = TemplateModelManager.shared.getImage(fromTemplateURL: imageData!)
+//        image = TemplateModelManager.shared.getImage(fromTemplateURL:  eventInvitation.eventInviteTemplate.templateImage)
         imagePreview.image = image
         // Do any additional setup after loading the view.
     }

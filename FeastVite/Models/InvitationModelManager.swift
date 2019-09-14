@@ -84,7 +84,7 @@ class InvitationModelManager{
             let queryBuilder:DataQueryBuilder = DataQueryBuilder()
             queryBuilder.setWhereClause(whereClause)
             tempalte = self.invitationsDataStore.find(queryBuilder) as! [InvitationModel]
-            let event = tempalte[0].events[0].invitationsList[0]
+//            let event = tempalte[0].events[0].invitationsList[0]
         }) { (exception) in
             print(exception.debugDescription)
         }
