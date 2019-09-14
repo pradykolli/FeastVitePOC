@@ -11,7 +11,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class ManageTemplatesCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    let backendless = Backendless.sharedInstance()!
+    let backendless = Backendless.sharedInstance()
     var eventObject:EventModel!
     var dictOfEventTemplate:[EventModel:TemplateModel] = [:]
 
@@ -26,29 +26,15 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
             
         }
         print("total number of templates are: ",TemplateModelManager.shared.templatesArray.count)
-        let currentUser : BackendlessUser = backendless.userService.currentUser
-        print("Current user",currentUser.objectId!)
-        
-        let chatBTN = UIButton(frame: CGRect(x: 0, y: 25, width: 65, height: 65))
-        chatBTN.layer.zPosition = 1000
-        chatBTN.layer.cornerRadius = 25
-        chatBTN.setImage(UIImage(named: "chat63"), for: .normal)
-        chatBTN.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        self.view.addSubview(chatBTN)
+        let currentUser : BackendlessUser = (backendless?.userService.currentUser)!
+        print("Current user",currentUser.objectId!)        
     }
     @objc func buttonAction(sender: UIButton!) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController") 
         self.navigationController?.pushViewController(chatViewController, animated: true)
     }
-    // MARK: - Navigation
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        // Get the new view controller using [segue destinationViewController].
-//        if let sendInvitation = segue.destination as? SendInvitationViewController {
-//            sendInvitation.eventObj = self.eventObject
-//        }
-//    }
+
  
 
     // MARK: UICollectionViewDataSource
