@@ -41,6 +41,7 @@
 		E8B19B3522D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2B22D55FA600FB6D5A /* ManageTemplatesCollectionViewController.swift */; };
 		E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */; };
 		E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */; };
+		E8CF292E23377ABE00C18847 /* ChatContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CF292D23377ABE00C18847 /* ChatContactsTableViewController.swift */; };
 		E8E9172F2326FE2F000C3F3E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E9172E2326FE2F000C3F3E /* ChatViewController.swift */; };
 		E8F903BB22DD412A00047D21 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */; };
 		E8F903BD22DD416C00047D21 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BC22DD416C00047D21 /* ContactModel.swift */; };
@@ -91,7 +92,6 @@
 		3F9D63B3232708950023273D /* RSVPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPViewController.swift; sourceTree = "<group>"; };
 		3F9D63B523270DF40023273D /* RSVPModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSVPModelManager.swift; sourceTree = "<group>"; };
 		3F9D63B7232935180023273D /* HostedDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostedDetailsViewController.swift; sourceTree = "<group>"; };
-		3F9D63B92329412C0023273D /* FeastVitePOC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeastVitePOC.entitlements; sourceTree = "<group>"; };
 		3F9D63BA2329446C0023273D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		3FBFFC1A22C45B59007C1182 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		3FCADC3422C1C4A000705A32 /* MailSenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailSenderViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +130,7 @@
 		E8B19B2C22D55FA600FB6D5A /* TemplateCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemplateCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8B19B2D22D55FA600FB6D5A /* CreateTemplateImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTemplateImageViewController.swift; sourceTree = "<group>"; };
 		E8C5D7342328682C00985304 /* FeastVitePOC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FeastVitePOC.entitlements; sourceTree = "<group>"; };
+		E8CF292D23377ABE00C18847 /* ChatContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatContactsTableViewController.swift; sourceTree = "<group>"; };
 		E8E9172E2326FE2F000C3F3E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		E8F903BC22DD416C00047D21 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
@@ -327,6 +328,7 @@
 				3F9D63B3232708950023273D /* RSVPViewController.swift */,
 				3F9D63B7232935180023273D /* HostedDetailsViewController.swift */,
 				E8E9172E2326FE2F000C3F3E /* ChatViewController.swift */,
+				E8CF292D23377ABE00C18847 /* ChatContactsTableViewController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -415,9 +417,6 @@
 							};
 							com.apple.iCloud = {
 								enabled = 0;
-							};
-							com.apple.Push = {
-								enabled = 1;
 							};
 						};
 					};
@@ -601,6 +600,7 @@
 				E89D955E22D748DC009AA662 /* EventModelManager.swift in Sources */,
 				E8B19B3722D55FA600FB6D5A /* CreateTemplateImageViewController.swift in Sources */,
 				3F8C989F22B18CA3009E1371 /* AppDelegate.swift in Sources */,
+				E8CF292E23377ABE00C18847 /* ChatContactsTableViewController.swift in Sources */,
 				3FBFFC1B22C45B59007C1182 /* Authentication.swift in Sources */,
 				E8E9172F2326FE2F000C3F3E /* ChatViewController.swift in Sources */,
 				E8F903BB22DD412A00047D21 /* ContactsTableViewController.swift in Sources */,
