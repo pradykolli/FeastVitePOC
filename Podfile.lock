@@ -9,7 +9,7 @@ DEPENDENCIES:
   - Backendless
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Backendless
     - Socket.IO-Client-Swift
     - Starscream
@@ -21,4 +21,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: eeec07da5ce174536d0d8592152d6af2185937ba
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.0.beta.2

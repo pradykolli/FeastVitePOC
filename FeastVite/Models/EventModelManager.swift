@@ -50,7 +50,7 @@ class EventModelManager{
     }
     func assign(event:EventModel, invitationTemplate:TemplateModel){
         let templateObj = self.templatesDataStore.save(invitationTemplate) as! TemplateModel
-        self.eventDataStore.addRelation("eventInviteTemplate:TemplateModel:n", parentObjectId: event.objectId, childObjects: [templateObj.objectId!])
+        self.eventDataStore.addRelation("eventInviteTemplate:TemplateModel:1", parentObjectId: event.objectId, childObjects: [templateObj.objectId!])
     }
     func retrieveAllEvents(){
         Types.tryblock({
@@ -79,4 +79,21 @@ class EventModelManager{
         return templates[0]
         
     }
+    func deleteTemplatesOrTemplate(_ id:String){
+                Types.tryblock({
+                    let dataStore = self.backendless.data.of(EventModel.self)
+        let loadRelationsQueryBuilder = LoadRelationsQueryBuilder.of(TemplateModel.self)
+        loadRelationsQueryBuilder!.setRelationName("eventInviteTemplate")
+        let data = dataStore?.loadRelations(id, queryBuilder: loadRelationsQueryBuilder) as! [TemplateModel]
+        print(data[0].objectId as Any)
+        TemplateModelManager.shared.templatesDataStore.remove(data[0].objectId!)
+        self.eventDataStore.remove(id)
+        
+                }) { (exception) in
+                    print(exception.debugDescription)
+                }
+    
+        
+    }
+
 }

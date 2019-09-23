@@ -19,6 +19,7 @@ class InvitationModel : NSObject {
     var hostID:String!
     var inviteeID:String!
     var objectId:String?
+    var guestCount:Int?
     private static var _shared:InvitationModel!
     static var shared:InvitationModel{
         if _shared == nil {
@@ -31,5 +32,6 @@ class InvitationModel : NSObject {
         self.eventID = ""
         self.hostID = ""
         self.inviteeID = ""
+        self.guestCount = 0
     }
 }

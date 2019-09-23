@@ -92,7 +92,6 @@ class ViewInvitationsTableViewController: UITableViewController {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let current = storyboard.instantiateViewController(withIdentifier: "RSVP") as! RSVPViewController
             self.navigationController?.pushViewController(current, animated: true)
-
         default:
             break
         }

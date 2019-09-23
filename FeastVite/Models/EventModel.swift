@@ -28,7 +28,7 @@ class EventModel:NSObject{
     var dateAndTime: String
     var eventInviteTemplate: TemplateModel
     var invitationsList:[InvitationModel] = []
-    var guestCount:Int
+    var guestCount:Int = 0
     
     override init(){
         self.address = ""
