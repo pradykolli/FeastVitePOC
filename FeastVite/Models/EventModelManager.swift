@@ -80,18 +80,23 @@ class EventModelManager{
         
     }
     func deleteTemplatesOrTemplate(_ id:String){
-                Types.tryblock({
+//                Types.tryblock({
                     let dataStore = self.backendless.data.of(EventModel.self)
         let loadRelationsQueryBuilder = LoadRelationsQueryBuilder.of(TemplateModel.self)
         loadRelationsQueryBuilder!.setRelationName("eventInviteTemplate")
         let data = dataStore?.loadRelations(id, queryBuilder: loadRelationsQueryBuilder) as! [TemplateModel]
         print(data[0].objectId as Any)
-        TemplateModelManager.shared.templatesDataStore.remove(data[0].objectId!)
+        Types.tryblock({
+            self.templatesDataStore.remove(data[0].objectId!)
+
+        }) { (exception) in
+            print(exception.debugDescription)
+        }
         self.eventDataStore.remove(id)
         
-                }) { (exception) in
-                    print(exception.debugDescription)
-                }
+//                }) { (exception) in
+//                    print(exception.debugDescription)
+//                }
     
         
     }
