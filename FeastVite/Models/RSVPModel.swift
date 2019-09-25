@@ -10,12 +10,18 @@ import Foundation
 
 @objcMembers
 class Rsvp:NSObject {
+    static let shared = Rsvp()
     var guestCount:Int?
     var backendless = Backendless.sharedInstance()
     var eventDataStore:IDataStore!
+    var RsvpDataStore:IDataStore!
     var objectId:String?
 
-    override init(){
-        self.guestCount = 0
+    private override init() {
+        self.RsvpDataStore = backendless?.data.of(Rsvp.self)
     }
+    
+//    init(guestcount:Int){
+//        self.guestCount = guestcount
+//    }
 }

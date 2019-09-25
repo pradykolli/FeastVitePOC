@@ -11,6 +11,7 @@
 		3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */; };
 		3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */; };
 		3F63B2D122BD438E0058302B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63B2D022BD438E0058302B /* Errors.swift */; };
+		3F67A5832339B03A00AB2F78 /* ContactModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F67A5822339B03A00AB2F78 /* ContactModelManager.swift */; };
 		3F8C989F22B18CA3009E1371 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C989E22B18CA3009E1371 /* AppDelegate.swift */; };
 		3F8C98A122B18CA3009E1371 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8C98A022B18CA3009E1371 /* ViewController.swift */; };
 		3F8C98A422B18CA3009E1371 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8C98A222B18CA3009E1371 /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		3F63B2CB22BC880E0058302B /* SetNewPasswordControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNewPasswordControllerViewController.swift; sourceTree = "<group>"; };
 		3F63B2CD22BD3FC30058302B /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		3F63B2D022BD438E0058302B /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		3F67A5822339B03A00AB2F78 /* ContactModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelManager.swift; sourceTree = "<group>"; };
 		3F8C989B22B18CA3009E1371 /* FeastVitePOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeastVitePOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8C989E22B18CA3009E1371 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8C98A022B18CA3009E1371 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			children = (
 				3F23B5DB22C152C30054CF72 /* contacts.playground */,
 				E82EF4FD22D598C20095264A /* TemplateModel.swift */,
+				3F67A5822339B03A00AB2F78 /* ContactModelManager.swift */,
 				E82EF4FF22D59E290095264A /* TemplateModelManager.swift */,
 				E89D955B22D73C39009AA662 /* EventModel.swift */,
 				E89D955D22D748DC009AA662 /* EventModelManager.swift */,
@@ -581,6 +584,7 @@
 				3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */,
 				3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */,
 				E82EF4FC22D595E30095264A /* AccountsViewController.swift in Sources */,
+				3F67A5832339B03A00AB2F78 /* ContactModelManager.swift in Sources */,
 				3F9D63B8232935180023273D /* HostedDetailsViewController.swift in Sources */,
 				E8424D0522E14FDB00893B27 /* ViewInvitationsTableViewController.swift in Sources */,
 				3F63B2CC22BC880E0058302B /* SetNewPasswordControllerViewController.swift in Sources */,

@@ -32,14 +32,23 @@ class RSVPViewController: UIViewController {
     
 
     @IBAction func acceptInvitationBTN(_ sender: Any) {
-        
+        if guestCount.text == "" {
+            print(ERROR.debugDescription)
+        }else{
+//            let rsvp = Rsvp(guestcount: Int(guestCount.text!)!)
+//            RSVPModelManager.shared.save(rsvp)
+        }
         
     }
     
     
     @IBAction func denyInvitationBTN(_ sender: Any) {
+        let alert = UIAlertController(title: "Deny invitation", message: "Are you sure", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
     }
     @IBAction func mayBeInvitaionBTN(_ sender: Any) {
+        
     }
     /*
     // MARK: - Navigation

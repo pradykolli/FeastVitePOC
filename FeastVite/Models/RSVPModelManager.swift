@@ -9,14 +9,15 @@
 import Foundation
 
 @objcMembers
-class RSVPModelManager{
+class RSVPModelManager:NSObject{
+    static let shared = RSVPModelManager()
     var backenless = Backendless.sharedInstance()!
     var RSVPDataStore:IDataStore!
-    private init(){
-        RSVPDataStore = backenless.data.of(Rsvp.self)
+    override init(){
+        self.RSVPDataStore = backenless.data.of(Rsvp.self)
     }
     
-    func save(){
-        
+    func save(_ rsvp:Rsvp){
+        self.RSVPDataStore!.save(rsvp)
     }
 }

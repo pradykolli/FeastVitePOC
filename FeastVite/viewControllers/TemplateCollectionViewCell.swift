@@ -12,4 +12,20 @@ class TemplateCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var templateNameLBL: UILabel!
     @IBOutlet weak var templatePreviewImage: UIImageView!
     
+    @IBOutlet weak var checkMarkLBL: UILabel!
+    @IBAction func deleteBTN(_ sender: Any) {
+    }
+    
+    var isInEditingMode: Bool = false {
+        didSet {
+            checkMarkLBL.isHidden = !isInEditingMode
+        }
+    }
+    override var isSelected: Bool {
+        didSet {
+            if isInEditingMode {
+                checkMarkLBL.text = isSelected ? "✓" : ""
+            }
+        }
+    }
 }
