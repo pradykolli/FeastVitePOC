@@ -67,7 +67,6 @@ class EventModelManager{
         
     }
     func getTemplate(relatedto event:EventModel) -> TemplateModel{
-        let dataStore = backendless.data.of(EventModel.self)
         
         // Prepare LoadRelationsQueryBuilder
         let loadRelationsQueryBuilder = LoadRelationsQueryBuilder.of(TemplateModel.self)
@@ -75,28 +74,25 @@ class EventModelManager{
         
         let objectId = event.objectId// removed for brevity
         
-        let templates = dataStore!.loadRelations(objectId, queryBuilder: loadRelationsQueryBuilder) as! [TemplateModel]
+        let templates = eventDataStore!.loadRelations(objectId, queryBuilder: loadRelationsQueryBuilder) as! [TemplateModel]
         return templates[0]
         
     }
     func deleteTemplatesOrTemplate(_ id:String){
-//                Types.tryblock({
-                    let dataStore = self.backendless.data.of(EventModel.self)
+
         let loadRelationsQueryBuilder = LoadRelationsQueryBuilder.of(TemplateModel.self)
         loadRelationsQueryBuilder!.setRelationName("eventInviteTemplate")
-        let data = dataStore?.loadRelations(id, queryBuilder: loadRelationsQueryBuilder) as! [TemplateModel]
-        print(data[0].objectId as Any)
+        let data = eventDataStore?.loadRelations(id, queryBuilder: loadRelationsQueryBuilder) as! [TemplateModel]
+//        print(data[0].objectId as Any)
         Types.tryblock({
-            self.templatesDataStore.remove(data[0].objectId!)
+            self.templatesDataStore.remove(byId: data[0].objectId)
+//            self.templatesDataStore.remove(data[0].objectId!)
 
         }) { (exception) in
             print(exception.debugDescription)
         }
-        self.eventDataStore.remove(id)
-        
-//                }) { (exception) in
-//                    print(exception.debugDescription)
-//                }
+        self.eventDataStore.remove(byId: id)
+
     
         
     }

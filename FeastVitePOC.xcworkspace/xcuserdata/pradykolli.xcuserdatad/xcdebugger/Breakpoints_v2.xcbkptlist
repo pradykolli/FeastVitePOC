@@ -19,5 +19,116 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FeastVite/Models/EventModelManager.swift"
+            timestampString = "591179532.468941"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "deleteTemplatesOrTemplate(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.EventModelManager.deleteTemplatesOrTemplate(Swift.String) -&gt; ()"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
+                  timestampString = "591177929.7916141"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "1425">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in FeastVitePOC.EventModelManager.deleteTemplatesOrTemplate(Swift.String) -&gt; ()"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
+                  timestampString = "591177929.793497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "492">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;Any&gt;) -&gt; () in FeastVitePOC.EventModelManager.deleteTemplatesOrTemplate(Swift.String) -&gt; ()"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
+                  timestampString = "591177929.796097"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "29">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FeastVite/Models/EventModelManager.swift"
+            timestampString = "591179532.4690059"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "deleteTemplatesOrTemplate(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.EventModelManager.deleteTemplatesOrTemplate(Swift.String) -&gt; ()"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
+                  timestampString = "591177929.802902"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.EventModelManager.deleteTemplatesOrTemplate(Swift.String) -&gt; ()"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
+                  timestampString = "591177929.805181"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "2024">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

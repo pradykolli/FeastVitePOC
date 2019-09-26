@@ -14,7 +14,7 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     let backendless = Backendless.sharedInstance()
     var eventObject:EventModel!
     var dictOfEventTemplate:[EventModel:TemplateModel] = [:]
-//    let events:[String] = ["one","two","three"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         CustomLoader.instance.hideLoaderView()
@@ -29,6 +29,7 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
         self.navigationItem.leftBarButtonItem = editButtonItem
 
     }
+    
     @IBOutlet weak var deleteButton: UIBarButtonItem!
     @objc func buttonAction(sender: UIButton!) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -48,9 +49,11 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
                 EventModelManager.shared.deleteTemplatesOrTemplate(deleteItem!)
                 collectionView.reloadData()
             }
-            // 3
-            collectionView.deleteItems(at: selectedCells)
-            deleteButton.isEnabled = false
+            collectionView.performBatchUpdates({
+                collectionView.deleteItems(at: selectedCells)
+                EventModelManager.shared.retrieveAllEvents()
+                
+            }, completion: nil)
         }
     }
     
@@ -72,7 +75,6 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
         return 1
     }
     
-    // 2
     override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         if let selectedItems = collectionView.indexPathsForSelectedItems, selectedItems.count == 0 {
             print(selectedItems.count)
@@ -83,7 +85,6 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return EventModelManager.shared.eventsArray.count
-//        return events.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -95,8 +96,6 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
         let templateImage:UIImage = TemplateModelManager.shared.getImage(fromTemplateURL: templateImageURL)
         cell.templatePreviewImage.image = templateImage
         cell.templateNameLBL.text = templateObject.templateName
-//        cell.templateNameLBL.text = events[indexPath.row]
-        
         cell.isInEditingMode = isEditing
         return cell
     }
@@ -139,36 +138,6 @@ class ManageTemplatesCollectionViewController: UICollectionViewController, UICol
             collectionView.reloadData()
         }, completion: nil)
     }
-    
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
+   
 
 }
