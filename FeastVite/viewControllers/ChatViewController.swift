@@ -11,7 +11,6 @@ import UIKit
 class ChatViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var sendMessageBTN: UIButton!
     @IBOutlet weak var messageTextViewTV: UITextView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
