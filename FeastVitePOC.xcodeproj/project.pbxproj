@@ -37,6 +37,8 @@
 		E8424D0522E14FDB00893B27 /* ViewInvitationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8424D0422E14FDB00893B27 /* ViewInvitationsTableViewController.swift */; };
 		E85F059823432EB70023628F /* MyTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F059723432EB70023628F /* MyTextMessageCell.swift */; };
 		E85F059A23432EEF0023628F /* ContactsTextMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F059923432EEF0023628F /* ContactsTextMessageCell.swift */; };
+		E85F059C234409710023628F /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F059B234409710023628F /* ChatModel.swift */; };
+		E85F059E2344208F0023628F /* ChatModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85F059D2344208F0023628F /* ChatModelManager.swift */; };
 		E862FA2522E04C5400DEB0D5 /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E862FA2422E04C5400DEB0D5 /* CustomLoader.swift */; };
 		E89D955C22D73C39009AA662 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D955B22D73C39009AA662 /* EventModel.swift */; };
 		E89D955E22D748DC009AA662 /* EventModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89D955D22D748DC009AA662 /* EventModelManager.swift */; };
@@ -49,7 +51,6 @@
 		E8F903BB22DD412A00047D21 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */; };
 		E8F903BD22DD416C00047D21 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BC22DD416C00047D21 /* ContactModel.swift */; };
 		E8F903BF22DD4C3D00047D21 /* AddNewContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */; };
-		E8F903C122DE33F600047D21 /* ContactModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C022DE33F600047D21 /* ContactModelManager.swift */; };
 		E8F903C322DE64F100047D21 /* InvitationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C222DE64F100047D21 /* InvitationModel.swift */; };
 		E8F903C522DEF93300047D21 /* InvitationModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C422DEF93300047D21 /* InvitationModelManager.swift */; };
 		E8F903C722DF07BC00047D21 /* SendInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */; };
@@ -128,6 +129,8 @@
 		E8424D0422E14FDB00893B27 /* ViewInvitationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInvitationsTableViewController.swift; sourceTree = "<group>"; };
 		E85F059723432EB70023628F /* MyTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextMessageCell.swift; sourceTree = "<group>"; };
 		E85F059923432EEF0023628F /* ContactsTextMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTextMessageCell.swift; sourceTree = "<group>"; };
+		E85F059B234409710023628F /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		E85F059D2344208F0023628F /* ChatModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModelManager.swift; sourceTree = "<group>"; };
 		E862FA2422E04C5400DEB0D5 /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 		E89D955B22D73C39009AA662 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		E89D955D22D748DC009AA662 /* EventModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModelManager.swift; sourceTree = "<group>"; };
@@ -141,7 +144,6 @@
 		E8F903BA22DD412A00047D21 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		E8F903BC22DD416C00047D21 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		E8F903BE22DD4C3D00047D21 /* AddNewContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewContactViewController.swift; sourceTree = "<group>"; };
-		E8F903C022DE33F600047D21 /* ContactModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModelManager.swift; sourceTree = "<group>"; };
 		E8F903C222DE64F100047D21 /* InvitationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationModel.swift; sourceTree = "<group>"; };
 		E8F903C422DEF93300047D21 /* InvitationModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationModelManager.swift; sourceTree = "<group>"; };
 		E8F903C622DF07BC00047D21 /* SendInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendInvitationViewController.swift; sourceTree = "<group>"; };
@@ -181,17 +183,18 @@
 			isa = PBXGroup;
 			children = (
 				3F23B5DB22C152C30054CF72 /* contacts.playground */,
-				E82EF4FD22D598C20095264A /* TemplateModel.swift */,
-				3F67A5822339B03A00AB2F78 /* ContactModelManager.swift */,
-				E82EF4FF22D59E290095264A /* TemplateModelManager.swift */,
 				E89D955B22D73C39009AA662 /* EventModel.swift */,
 				E89D955D22D748DC009AA662 /* EventModelManager.swift */,
 				E8F903BC22DD416C00047D21 /* ContactModel.swift */,
-				E8F903C022DE33F600047D21 /* ContactModelManager.swift */,
+				3F67A5822339B03A00AB2F78 /* ContactModelManager.swift */,
+				E82EF4FD22D598C20095264A /* TemplateModel.swift */,
+				E82EF4FF22D59E290095264A /* TemplateModelManager.swift */,
 				E8F903C222DE64F100047D21 /* InvitationModel.swift */,
 				E8F903C422DEF93300047D21 /* InvitationModelManager.swift */,
 				3F9D63AE232708340023273D /* RSVPModel.swift */,
 				3F9D63B523270DF40023273D /* RSVPModelManager.swift */,
+				E85F059B234409710023628F /* ChatModel.swift */,
+				E85F059D2344208F0023628F /* ChatModelManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				3F9D63B623270DF40023273D /* RSVPModelManager.swift in Sources */,
 				3F63B2CE22BD3FC30058302B /* HomePageViewController.swift in Sources */,
 				3FF02C2422B3512E008A787A /* RegistrationViewController.swift in Sources */,
+				E85F059C234409710023628F /* ChatModel.swift in Sources */,
 				E82EF4FC22D595E30095264A /* AccountsViewController.swift in Sources */,
 				3F67A5832339B03A00AB2F78 /* ContactModelManager.swift in Sources */,
 				3F9D63B8232935180023273D /* HostedDetailsViewController.swift in Sources */,
@@ -598,9 +602,9 @@
 				E8F903C722DF07BC00047D21 /* SendInvitationViewController.swift in Sources */,
 				E8B19B3122D55FA600FB6D5A /* PreviewViewController.swift in Sources */,
 				E85F059A23432EEF0023628F /* ContactsTextMessageCell.swift in Sources */,
+				E85F059E2344208F0023628F /* ChatModelManager.swift in Sources */,
 				3FF02C2822B386FA008A787A /* ResetPasswordViewController.swift in Sources */,
 				E8F903BD22DD416C00047D21 /* ContactModel.swift in Sources */,
-				E8F903C122DE33F600047D21 /* ContactModelManager.swift in Sources */,
 				3F63B2D122BD438E0058302B /* Errors.swift in Sources */,
 				3F8C98A122B18CA3009E1371 /* ViewController.swift in Sources */,
 				E8B19B3622D55FA600FB6D5A /* TemplateCollectionViewCell.swift in Sources */,

@@ -9,7 +9,9 @@
 import UIKit
 
 class ChatViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
-    
+    var backendless:Backendless = Backendless.sharedInstance()
+    var currentUser:BackendlessUser!
+    var recieverUser:String!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sendMessageBTN: UIButton!
     @IBOutlet weak var messageTextViewTV: UITextView!
@@ -27,12 +29,19 @@ class ChatViewController: UIViewController, UITextViewDelegate, UITextFieldDeleg
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
-    self.messageTextViewTV.layer.borderWidth = 2
-    self.messageTextViewTV.layer.cornerRadius = 15
+        self.messageTextViewTV.layer.borderWidth = 2
+        self.messageTextViewTV.layer.cornerRadius = 15
+        currentUser = backendless.userService.currentUser
         // Do any additional setup after loading the view.
     }
     
     @IBAction func sendActionBTN(_ sender: Any) {
+        let chat:ChatModel = ChatModel.shared
+        chat.message = messageTextViewTV.text!
+        chat.senderId = (currentUser.email as String)
+        chat.recieverId = ""
+        let _ = ChatModelManager.shared.addMessage(chat)
+        messageTextViewTV.text = ""
     }
     
     /*
