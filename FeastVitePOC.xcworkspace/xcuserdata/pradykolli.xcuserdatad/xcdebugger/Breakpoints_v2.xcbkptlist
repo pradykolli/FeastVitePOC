@@ -42,7 +42,7 @@
                   moduleName = "FeastVitePOC"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
-                  timestampString = "591697576.013294"
+                  timestampString = "591723450.072168"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
@@ -57,7 +57,7 @@
                   moduleName = "FeastVitePOC"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
-                  timestampString = "591697576.01526"
+                  timestampString = "591723450.074033"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "91"
@@ -72,7 +72,7 @@
                   moduleName = "FeastVitePOC"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
-                  timestampString = "591697576.016814"
+                  timestampString = "591723450.075663"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "92"
@@ -105,7 +105,7 @@
                   moduleName = "FeastVitePOC"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
-                  timestampString = "591697576.021814"
+                  timestampString = "591723450.081825"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "85"
@@ -120,12 +120,120 @@
                   moduleName = "FeastVitePOC"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/Models/EventModelManager.swift"
-                  timestampString = "591697576.023437"
+                  timestampString = "591723450.0834121"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "85"
                   endingLineNumber = "85"
                   offsetFromSymbolStart = "2024">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FeastVite/viewControllers/ChatViewController.swift"
+            timestampString = "591723449.742558"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "ChatViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.ChatViewController.recieverUser.getter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/viewControllers/ChatViewController.swift"
+                  timestampString = "591723450.0873801"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "119">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.ChatViewController.recieverUser.setter : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/viewControllers/ChatViewController.swift"
+                  timestampString = "591723450.088905"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "147">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.ChatViewController.recieverUser.modify : Swift.Optional&lt;Swift.String&gt;"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/viewControllers/ChatViewController.swift"
+                  timestampString = "591723450.090439"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.ChatViewController.recieverUser.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/viewControllers/ChatViewController.swift"
+                  timestampString = "591723450.092163"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.ChatViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; FeastVitePOC.ChatViewController"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/viewControllers/ChatViewController.swift"
+                  timestampString = "591723450.093792"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "543">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FeastVitePOC.ChatViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;FeastVitePOC.ChatViewController&gt;"
+                  moduleName = "FeastVitePOC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pradykolli/Downloads/FeastVitePOC/FeastVite/viewControllers/ChatViewController.swift"
+                  timestampString = "591723450.095593"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "463">
                </Location>
             </Locations>
          </BreakpointContent>
